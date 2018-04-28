@@ -1,0 +1,47 @@
+.home {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    background-color: #e6786f;
+    background-blend-mode: multiply;
+    text-align: center;
+    padding: 100px 0 165px;
+    color: #ffffff;
+
+    h1 {
+        font-size: 5.5em;
+        color: #ffffff;
+        text-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        line-height: 0.4;
+        margin-bottom: 36px;
+
+        span {
+            font-size: 0.5em;
+        }
+    }
+
+    p {
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 6px;
+    }
+
+    .date {
+        font-size: 1em;
+    }
+
+    .home-grid-container {
+        display: grid;
+        grid-column-gap: 50px;
+        grid-row-gap: 50px;
+    }
+
+    .icon-container {
+        height: 100px;
+        text-align: center;
+    }
+
+    .mj-icon {
+        margin: 0 auto;
+        height: 100%;
+    }
+}

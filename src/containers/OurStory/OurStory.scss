@@ -1,0 +1,56 @@
+.our-story {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    background-blend-mode: multiply;
+    padding: 100px 0 165px;
+    color: #104f83;
+
+    h2 {
+        text-transform: none;
+        font-size: 4em;
+        margin-bottom: 36px;
+    }
+
+    .wedding-party {
+        margin-top: 50px;
+        border-top: 1px solid #dedede;
+        padding-top: 50px;
+
+
+        h3 {
+            font-size: 3.5em;
+        }
+
+        .wedding-party-list {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .wedding-party-item {
+            h3 {
+                font-size: 3em;
+            }
+
+            ul {
+                list-style-type: none;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-bottom: 12px;
+
+                    span {
+                        display: block;
+                        font-size: 0.8em;
+                        margin-bottom: 12px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .wedding-party-witness {
+            margin-top: 24px;
+        }
+    }
+}

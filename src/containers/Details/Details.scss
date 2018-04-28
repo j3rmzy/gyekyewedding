@@ -1,0 +1,18 @@
+.details {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    background-blend-mode: multiply;
+    padding: 50px 0 165px;
+    background-color: #063f70;
+    color: #ffffff;
+    text-align: center;
+
+    h3, h4 {
+        font-size: 5em;
+        color: #d4bfa9;
+    }
+
+    h4 {
+        font-size: 3em;
+        margin-bottom: 24px;
+    }
+}
