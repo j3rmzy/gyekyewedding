@@ -7,9 +7,9 @@
         display: grid;
 
         @media screen and (min-width: $screen-sm) {
-            grid-template-columns: 49% 49%;
+            grid-template-columns: 45% 49%;
             grid-row-gap: 0;
-            grid-column-gap: 2%;
+            grid-column-gap: 6%;
         }
 
         .church-grid {
