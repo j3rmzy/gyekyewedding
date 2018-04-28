@@ -1,8 +1,42 @@
+@import '../../assets/sass/variables.scss';
+
 .our-story {
     background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
     background-blend-mode: multiply;
     padding: 100px 0 165px;
-    color: #104f83;
+    color: $blue;
+
+    @media screen and (min-width: $screen-sm) {
+        padding-top: 48px;
+    }
+
+    .our-story-images {
+        background-color: $grey;
+    }
+
+    .our-story-grid-container {
+        display: grid;
+
+        @media screen and (min-width: $screen-sm) {
+            grid-template-columns: 49% 49%;
+            grid-row-gap: 0;
+            grid-column-gap: 2%;
+        }
+
+        .our-story-image-grid {
+            @media screen and (min-width: $screen-sm) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+        }
+
+        .our-story-grid {
+            @media screen and (min-width: $screen-sm) {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+        }
+    }
 
     h2 {
         text-transform: none;
@@ -12,7 +46,7 @@
 
     .wedding-party {
         margin-top: 50px;
-        border-top: 1px solid #dedede;
+        border-top: 1px solid $grey;
         padding-top: 50px;
 
 

@@ -7,17 +7,17 @@ import './Home.scss';
 
 const Home = () => {
     return (
-        <div className="home paper-bg">
+        <div className="home">
             <Wrapper>
                 <div className="home-grid-container">
-                    <div className="grid-item">
+                    <div className="icon-grid">
                         <div className="icon-container">
                             <img src={MJIcon} className="img-responsive mj-icon" alt="M &amp; J icon" />
                         </div>
                     </div>
-                    <div className="grid-item">
+                    <div className="title-grid">
                         <div className="title">
-                            <h1>Michelle Cook <br/><span>&amp;</span><br/>Jermaine Gyekye</h1>
+                            <h1>Michelle Cook <span>&amp;</span> Jermaine Gyekye</h1>
                             <p>Are getting married!</p>
                             <p className="date">Saturday 22<sup>nd</sup> September 2018</p>
                             <a href="#" className="button" alt="RSVP Here">RSVP!</a>
