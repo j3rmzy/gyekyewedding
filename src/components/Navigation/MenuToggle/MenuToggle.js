@@ -4,7 +4,7 @@ import './MenuToggle.scss';
 
 const menuToggle = (props) => {
     return (
-        <button className="burger-menu">
+        <button className="burger-menu" onClick={props.open}>
             <div></div>
             <div></div>
             <div></div>

@@ -5,10 +5,10 @@ import './Toolbar.scss';
 import MenuToggle from '../MenuToggle/MenuToggle';
 import NavigationItems from '../NavigationItems/NavigationItems';
 
-const toolbar = () => {
+const toolbar = (props) => {
     return (
         <header className="toolbar">
-            <MenuToggle />
+            <MenuToggle open={props.open} />
             <nav className="toolbar-desktop-only">
                 <NavigationItems />
             </nav>

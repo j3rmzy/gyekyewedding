@@ -1,13 +1,41 @@
 import React, { Component } from 'react';
 
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import TopDrawer from '../../components/Navigation/TopDrawer/TopDrawer';
 
 class Layout extends Component {
+    state = {
+        showTopDraw: false
+    }
+
+    topDrawCloseHandler = () => {
+        this.setState({
+            showTopDraw: false
+        })
+    }
+
+    topDrawOpenHandler = () => {
+        this.setState((prevState) => {
+            return {
+                showTopDraw: !prevState.showTopDraw
+            }
+        })
+    }
+
+    signOutHandler = () => {
+
+    }
+
+
     render () {
         return (
-            <div class="site-wrapper">
+            <div className="site-wrapper">
                 <div>
-                    <Toolbar />
+                    <Toolbar 
+                        open={this.topDrawOpenHandler} />
+                    <TopDrawer 
+                        open={this.state.showTopDraw}
+                        closed={this.topDrawCloseHandler} />
                 </div>
                 <main className="main">
                     {this.props.children}
