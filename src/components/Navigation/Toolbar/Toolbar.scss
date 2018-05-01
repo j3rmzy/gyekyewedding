@@ -10,4 +10,12 @@
     z-index: 15;
     display: flex;
     padding: 0 20px;
+
+    .toolbar-desktop-only {
+        display: none;
+
+        @media screen and (min-width: $screen-sm) {
+            display: block;
+        }
+    }
 }

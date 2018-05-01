@@ -1,0 +1,41 @@
+@import '../../../assets/sass/variables.scss';
+
+.top-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $grey;
+    color: $blue;
+    text-align: center;
+    height: 270px;
+    max-height: 70%;
+    z-index: 200;
+    padding: 15px;
+    transition: transform 0.3s ease-out;
+    
+    @media screen and (min-width: $screen-sm) {
+        .top-drawer {
+            display: none;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            line-height: 2.5;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.open {
+    transform: translateY(0);
+}
+
+.close {
+    transform: translateY(-100%);
+}
