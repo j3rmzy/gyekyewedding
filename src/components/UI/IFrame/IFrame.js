@@ -9,7 +9,7 @@ const iframeStyle = {
 const IFrame = (props) => {
     return (
         <iframe 
-            src={props.url} 
+            src={props.src} 
             style={iframeStyle}
             frameBorder="0"
             allowFullScreen

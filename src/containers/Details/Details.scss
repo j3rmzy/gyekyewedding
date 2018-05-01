@@ -3,7 +3,7 @@
 .details {
     background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
     background-blend-mode: multiply;
-    padding: 50px 0 165px;
+    padding: 0 0 90px;
     background-color: $blue;
     color: #ffffff;
     text-align: center;
@@ -13,8 +13,47 @@
         color: $gold;
     }
 
+    h3 {
+        padding-top: 50px;
+    }
+
     h4 {
         font-size: 3em;
         margin-bottom: 24px;
+    }
+}
+
+.details-grid-container {
+    display: grid;
+
+    @media screen and (min-width: $screen-sm) {
+        grid-template-columns: 47% 47%;
+        grid-row-gap: 0;
+        grid-column-gap: 6%;
+    }
+
+    .details-grid {
+        @media screen and (min-width: $screen-sm) {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            text-align: left;
+        }
+    }
+
+    .map-grid {
+        @media screen and (min-width: $screen-sm) {
+            grid-column-start: 2;
+            grid-row-start: 1;
+        }
+    }
+}
+
+.map {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 24px 0 60px;
+
+    @media screen and (min-width: $screen-sm) {
+        height: 100%;
     }
 }

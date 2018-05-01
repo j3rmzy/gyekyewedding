@@ -1,0 +1,24 @@
+@import '../../assets/sass/variables.scss';
+
+.accommodation {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    background-blend-mode: multiply;
+    padding: 50px 0 0;
+    text-align: center;
+    color: $blue;
+
+
+    h3 {
+        font-size: 3em;
+        margin-bottom: 24px;
+    }
+
+    a {
+        font-weight: 400;
+        color: $blue;
+    }
+
+    .map {
+        margin-bottom: 0;
+    }
+}
