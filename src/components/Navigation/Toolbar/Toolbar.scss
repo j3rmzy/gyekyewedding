@@ -1,0 +1,13 @@
+@import '../../../assets/sass/variables.scss';
+
+.toolbar {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    display: flex;
+    padding: 0 20px;
+}
