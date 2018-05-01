@@ -12,6 +12,10 @@
         font-size: 3em;
         margin-bottom: 24px;
         padding-top: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
     }
 
     a {

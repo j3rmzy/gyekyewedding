@@ -11,6 +11,10 @@
     h3 {
         font-size: 3em;
         margin-bottom: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
     }
 
     a {
@@ -19,6 +23,33 @@
     }
 
     .map {
+        margin: 24px 0 0;
+    }
+
+    .alternative-hotels {
         margin-bottom: 0;
+        padding-top: 24px;
+
+        &.top {
+            display: none;
+
+            @media screen and (min-width: $screen-sm) {
+                display: block;
+            }
+        }
+
+        &.bottom {
+            display: block;
+
+            @media screen and (min-width: $screen-sm) {
+                display: none;
+            }
+        }
+    }
+
+    .details-grid-container {
+        @media screen and (min-width: $screen-sm) {
+            margin-bottom: 0;
+        }
     }
 }

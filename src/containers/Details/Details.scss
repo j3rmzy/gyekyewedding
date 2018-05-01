@@ -9,17 +9,25 @@
     text-align: center;
 
     h3, h4 {
-        font-size: 5em;
         color: $gold;
     }
 
     h3 {
+        font-size: 5em;
         padding-top: 50px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 7em;
+        }
     }
 
     h4 {
         font-size: 3em;
         margin-bottom: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
     }
 }
 
@@ -30,6 +38,7 @@
         grid-template-columns: 47% 47%;
         grid-row-gap: 0;
         grid-column-gap: 6%;
+        margin-bottom: 60px;
     }
 
     .details-grid {
@@ -52,8 +61,24 @@
     background-color: #ffffff;
     padding: 10px;
     margin: 24px 0 60px;
+    height: 250px;
 
     @media screen and (min-width: $screen-sm) {
-        height: 100%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        height: 350px;
+    }
+}
+
+.narrow-copy {
+    @media screen and (min-width: $screen-sm) {
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        width: 700px;
     }
 }

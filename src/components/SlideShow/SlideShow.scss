@@ -1,0 +1,12 @@
+@import '../../assets/sass/variables.scss';
+
+.slide-show-wrapper {
+    display: none;
+
+    @media screen and (min-width: $screen-sm) {
+        display: block;
+        margin-top: 60px;
+        background-color: #ffffff;
+        height: 350px;
+    }
+}
