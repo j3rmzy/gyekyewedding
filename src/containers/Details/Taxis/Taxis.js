@@ -4,7 +4,7 @@ import Wrapper from '../../../hoc/Wrapper/Wrapper';
 
 const taxis = () => {
     return (
-        <div className="details-inner">
+        <div className="details-inner" name="taxis">
             <h4>Taxis</h4>
             <Wrapper>
                 <div className="narrow-copy">

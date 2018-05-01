@@ -5,7 +5,7 @@ import IFrame from '../../../components/UI/IFrame/IFrame';
 
 const reception = () => {
     return (
-        <div className="details-inner">
+        <div className="details-inner" name="reception">
             <h4>Reception</h4>
             <Wrapper>
                 <div className="details-grid-container">

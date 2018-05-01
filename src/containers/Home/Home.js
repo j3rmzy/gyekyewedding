@@ -20,7 +20,7 @@ const Home = () => {
                             <h1>Michelle Cook <span>&amp;</span> Jermaine Gyekye</h1>
                             <p>Are getting married!</p>
                             <p className="date">Saturday 22<sup>nd</sup> September 2018</p>
-                            <a href="#" className="button" alt="RSVP Here">RSVP!</a>
+                            <a className="button" alt="RSVP Here">RSVP!</a>
                         </div>
                     </div>
                 </div>

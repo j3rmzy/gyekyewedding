@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const navigationItems = () => {
-    return (
-        <ul>
-            <li>Home</li>
-            <li>Our Story</li>
-            <li>Church</li>
-            <li>Reception</li>
-            <li>Accommodation</li>
-            <li>Gifts</li>
-        </ul>
-    )
+class NavigationItems extends Component {
+    render () {
+        return (
+            <ul>
+                <li>Home</li>
+                <li>Our Story</li>
+                <li>Church</li>
+                <li onClick={this.props.clicked}>Reception</li>
+                <li onClick={this.props.clicked}>Accommodation</li>
+                <li>Gifts</li>
+            </ul>
+        )
+    }
 }
 
-export default navigationItems;
+export default NavigationItems;

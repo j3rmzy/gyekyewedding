@@ -10,7 +10,8 @@ const toolbar = (props) => {
         <header className="toolbar">
             <MenuToggle open={props.open} />
             <nav className="toolbar-desktop-only">
-                <NavigationItems />
+                <NavigationItems 
+                    clicked={props.closed} />
             </nav>
         </header>
     )

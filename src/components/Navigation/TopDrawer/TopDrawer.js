@@ -16,7 +16,8 @@ const topDrawer = (props) => {
         <Aux>
             <BackDrop show={props.open} clicked={props.closed} />
             <nav className={attachedClasses.join(' ')}>
-                <NavigationItems />
+                <NavigationItems 
+                    clicked={props.closed} />
             </nav>
         </Aux>
     )
