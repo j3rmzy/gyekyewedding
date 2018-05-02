@@ -6,14 +6,16 @@ import Taxis from './Taxis/Taxis';
 
 import './Details.scss';
 
+import { Element } from 'react-scroll';
+
 const Details = () => {
     return (
-        <div className="details">
+        <Element className="details" name="church">
             <h3>Details</h3>
             <Church />
             <Reception />
             <Taxis />
-        </div>
+        </Element>
     )
 }
 
