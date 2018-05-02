@@ -1,0 +1,36 @@
+.login-form {
+    input {
+        padding: 10px;
+        font-size: 1.2em;
+        width: 100%;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+}
+
+
+.LoginForm .Disabled {
+    background-color: #cccccc;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none !important;
+    opacity: 0.5;
+}
+
+.LoginForm .Button:hover {
+    box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+.LoginForm .FormRow {
+    display: block;
+}
+
+.LoginForm label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.LoginForm {
+    padding: 15px;
+    background-color: #f4f4f4;
+}

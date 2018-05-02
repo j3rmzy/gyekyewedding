@@ -3,6 +3,7 @@ import React from 'react';
 import './NavigationItems.scss';
 
 import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 const menuItems = ['Home', 'Our Story', 'Church', 'Reception', 'Taxis', 'Accommodation', 'Gifts']
 
@@ -29,7 +30,7 @@ const navigationItems = (props) => {
                     </li>
                 )}
             )}
-            <li><a>RSVP</a></li>
+            <li onClick={props.clicked}><NavLink exact to="/rsvp">RSVP</NavLink></li>
         </ul>
     )
 }

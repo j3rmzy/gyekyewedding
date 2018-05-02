@@ -1,0 +1,13 @@
+@import '../../../assets/sass/variables.scss';
+
+
+.button {
+    border: none;
+    cursor: pointer;
+
+    @media screen and (min-width: $screen-sm) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 75%;
+    }
+}
