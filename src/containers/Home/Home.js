@@ -5,9 +5,11 @@ import MJIcon from '../../assets/images/mj-icon.svg';
 
 import './Home.scss';
 
+import { Element } from 'react-scroll';
+
 const Home = () => {
     return (
-        <div className="home">
+        <Element className="home" name="home">
             <Wrapper>
                 <div className="home-grid-container">
                     <div className="icon-grid">
@@ -25,7 +27,7 @@ const Home = () => {
                     </div>
                 </div>
             </Wrapper>
-        </div>
+        </Element>
     )
 }
 

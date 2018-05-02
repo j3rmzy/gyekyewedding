@@ -60,7 +60,7 @@
 .map {
     background-color: #ffffff;
     padding: 10px;
-    margin: 24px 0 60px;
+    margin: 24px 0 0;
     height: 250px;
 
     @media screen and (min-width: $screen-sm) {
@@ -81,4 +81,8 @@
     @media screen and (min-width: $screen-md) {
         width: 700px;
     }
+}
+
+.details-inner {
+    padding-top: 50px;
 }

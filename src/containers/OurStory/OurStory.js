@@ -5,9 +5,11 @@ import SlideShow from '../../components/SlideShow/SlideShow';
 
 import './OurStory.scss';
 
+import { Element } from 'react-scroll';
+
 const ourStory = () => {
     return (
-        <div className="our-story">
+        <Element className="our-story" name="our-story">
             <Wrapper>
                 <div className="our-story-grid-container">
                     <div className="our-story-image-grid">
@@ -64,7 +66,7 @@ const ourStory = () => {
                 </div>
             </Wrapper>
             <SlideShow />
-        </div>
+        </Element>
     )
 }
 
