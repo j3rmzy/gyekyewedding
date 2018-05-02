@@ -1,21 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './NavigationItems.scss';
 
-class NavigationItems extends Component {
-    render () {
-        return (
-            <ul className="navigationItems">
-                <li><a onClick={this.props.clicked}>Home</a></li>
-                <li><a onClick={this.props.clicked}>Our Story</a></li>
-                <li><a>RSVP</a></li>
-                <li><a onClick={this.props.clicked}>Church</a></li>
-                <li><a onClick={this.props.clicked}>Reception</a></li>
-                <li><a onClick={this.props.clicked}>Accommodation</a></li>
-                <li><a onClick={this.props.clicked}>Gifts</a></li>
-            </ul>
-        )
-    }
+import { Link } from 'react-scroll';
+
+const menuItems = ['Home', 'Our Story', 'Church', 'Reception', 'Taxis', 'Accommodation', 'Gifts']
+
+const navigationItems = (props) => {
+    return (
+        <ul className="navigationItems">
+            {menuItems.map((item) => {
+                let anchor = item.replace(/\s+/g, '-').toLowerCase();
+                let offset = 0;
+
+                if (anchor === 'church') {
+                    offset = -100
+                }
+
+                return (
+                    <li key={item}>
+                        <Link to={anchor} 
+                            spy={true} 
+                            hashSpy={true} 
+                            smooth={true} 
+                            duration={500} 
+                            offset={offset}
+                            onSetActive={props.clicked}>{item}</Link>
+                    </li>
+                )}
+            )}
+            <li><a>RSVP</a></li>
+        </ul>
+    )
 }
 
-export default NavigationItems;
+export default navigationItems;
