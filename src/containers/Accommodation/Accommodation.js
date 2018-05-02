@@ -5,11 +5,9 @@ import './Accommodation.scss';
 import Wrapper from '../../hoc/Wrapper/Wrapper';
 import IFrame from '../../components/UI/IFrame/IFrame'; 
 
-import { Element } from 'react-scroll';
-
 const accommodation = (props) => {
     return (
-        <Element className="accommodation" name="accommodation">
+        <div className="accommodation" id="accommodation">
             <h3>Accommodation</h3>
             <Wrapper>
                 <div className="details-grid-container">
@@ -30,7 +28,7 @@ const accommodation = (props) => {
                     <p className="alternative-hotels bottom">View alternative hotels</p>
                 </div>
             </Wrapper>
-        </Element>
+        </div>
     )
 }
 

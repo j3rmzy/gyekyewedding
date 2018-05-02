@@ -2,35 +2,28 @@ import React from 'react';
 
 import './NavigationItems.scss';
 
-import { Link } from 'react-scroll';
-import { NavLink } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-const menuItems = ['Home', 'Our Story', 'Church', 'Reception', 'Taxis', 'Accommodation', 'Gifts']
+const menuItems = ['Home', 'Our Story', 'Church', 'Reception', 'Taxis', 'Accommodation', 'Gifts', 'RSVP']
 
 const navigationItems = (props) => {
     return (
         <ul className="navigationItems">
             {menuItems.map((item) => {
                 let anchor = item.replace(/\s+/g, '-').toLowerCase();
-                let offset = 0;
-
-                if (anchor === 'church') {
-                    offset = -100
+                let hash = '/#' + anchor;
+                
+                if (anchor === 'rsvp') {
+                    hash = '/rsvp/login';
                 }
 
                 return (
-                    <li key={item}>
-                        <Link to={anchor} 
-                            spy={true} 
-                            hashSpy={true} 
-                            smooth={true} 
-                            duration={500} 
-                            offset={offset}
-                            onSetActive={props.clicked}>{item}</Link>
+                    <li key={item} onClick={props.clicked}>
+                        <NavLink smooth to={hash}>{item}</NavLink>
                     </li>
-                )}
+                )
+            }
             )}
-            <li onClick={props.clicked}><NavLink exact to="/rsvp">RSVP</NavLink></li>
         </ul>
     )
 }

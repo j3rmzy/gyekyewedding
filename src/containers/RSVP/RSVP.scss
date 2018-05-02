@@ -10,4 +10,11 @@
     h1 {
         letter-spacing: 10px;
     }
+
+    .rsvp-inner {
+        @media screen and (min-width: $screen-md) {
+            margin: 0 auto;
+            width: 700px;
+        }
+    }
 }

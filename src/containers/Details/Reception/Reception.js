@@ -3,11 +3,9 @@ import React from 'react';
 import Wrapper from '../../../hoc/Wrapper/Wrapper';
 import IFrame from '../../../components/UI/IFrame/IFrame';
 
-import { Element } from 'react-scroll';
-
 const reception = () => {
     return (
-        <Element className="details-inner" name="reception">
+        <div className="details-inner" id="reception">
             <h4>Reception</h4>
             <Wrapper>
                 <div className="details-grid-container">
@@ -22,7 +20,7 @@ const reception = () => {
                     </div>
                 </div>
             </Wrapper>
-        </Element>
+        </div>
     )
 }
 

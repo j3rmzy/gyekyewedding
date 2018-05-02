@@ -18,5 +18,12 @@
             display: block;
             width: 100%;
         }
+
+        .navigationItems {
+            @media screen and (min-width: $screen-md) {
+                width: 960px;
+                margin: 0 auto;
+            }
+        }
     }
 }

@@ -16,10 +16,11 @@
     li {
         line-height: 2.5;
         text-transform: uppercase;
-
+        
         a {
-            cursor: pointer;
-
+            color: $blue;
+            text-decoration: none;
+            
             @media screen and (min-width: $screen-sm) {
                 color: #ffffff;
             }

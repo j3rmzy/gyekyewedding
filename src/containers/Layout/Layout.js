@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import TopDrawer from '../../components/Navigation/TopDrawer/TopDrawer';
@@ -6,6 +7,19 @@ import TopDrawer from '../../components/Navigation/TopDrawer/TopDrawer';
 class Layout extends Component {
     state = {
         showTopDraw: false
+    }
+
+    setActiveClassHandler = (event) => {
+        let activeLinks = document.querySelectorAll('.navigationItems li a.active');
+        if (activeLinks.length > 0) {
+            activeLinks.forEach((activeLink) => {
+                activeLink.className = "";
+            })
+        }
+
+        event.target.className = 'active';
+
+        this.topDrawCloseHandler();
     }
 
     topDrawCloseHandler = (event) => {
@@ -32,10 +46,11 @@ class Layout extends Component {
             <div className="site-wrapper">
                 <div>
                     <Toolbar 
-                        open={this.topDrawOpenHandler} />
+                        open={this.topDrawOpenHandler}
+                        setActiveClass={this.setActiveClassHandler} />
                     <TopDrawer 
                         open={this.state.showTopDraw}
-                        closed={this.topDrawCloseHandler} />
+                        setActiveClass={this.setActiveClassHandler} />
                 </div>
                 <main className="main">
                     {this.props.children}
@@ -45,4 +60,4 @@ class Layout extends Component {
     }
 }
 
-export default Layout;
+export default withRouter(Layout);

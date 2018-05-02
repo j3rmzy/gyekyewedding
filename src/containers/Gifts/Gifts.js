@@ -4,13 +4,11 @@ import Wrapper from '../../hoc/Wrapper/Wrapper';
 
 import './Gifts.scss';
 
-import { Element } from 'react-scroll';
-
 import KuoniLogo from '../../assets/images/kuoni_logo.svg';
 
 const gifts = () => {
     return (
-        <Element className="gifts" nmae="gifts">
+        <div className="gifts" id="gifts">
             <h3>Gifts</h3>
             <Wrapper>
                 <div className="narrow-copy">
@@ -22,7 +20,7 @@ const gifts = () => {
                     </a>
                 </div>
             </Wrapper>
-        </Element>
+        </div>
     )
 }
 

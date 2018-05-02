@@ -11,7 +11,7 @@ const toolbar = (props) => {
             <MenuToggle open={props.open} />
             <nav className="toolbar-desktop-only">
                 <NavigationItems 
-                    clicked={props.toAnchor} />
+                    clicked={props.setActiveClass} />
             </nav>
         </header>
     )

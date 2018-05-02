@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Element } from 'react-scroll';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
 import Button from '../../components/UI/Button/Button';
@@ -17,7 +16,7 @@ class Home extends Component {
 
     render() {
         return (
-            <Element className="home" name="home" id="home">
+            <div className="home" id="home">
                 <Wrapper>
                     <div className="home-grid-container">
                         <div className="icon-grid">
@@ -36,7 +35,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </Wrapper>
-            </Element>
+            </div>
         )
     }
 }

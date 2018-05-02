@@ -13,10 +13,11 @@ class RSVP extends Component {
             <div className="rsvp">
                 <Wrapper>
                     <h1>RSVP</h1>
-                    <Switch>
-                        <Route path={`${this.props.match.url}/login`} component={LoginForm} />
-                    </Switch>
-
+                    <div className="rsvp-inner">
+                        <Switch>
+                            <Route path={`${this.props.match.url}/login`} component={LoginForm} />
+                        </Switch>
+                    </div>
                 </Wrapper>
             </div>
         )
