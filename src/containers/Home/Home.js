@@ -9,7 +9,7 @@ import { Element } from 'react-scroll';
 
 const Home = () => {
     return (
-        <Element className="home" name="home">
+        <Element className="home" name="home" id="home">
             <Wrapper>
                 <div className="home-grid-container">
                     <div className="icon-grid">
