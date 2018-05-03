@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
-import SlideShow from '../../components/SlideShow/SlideShow';
+import SimpleSlider from '../../components/SlideShow/SlideShow';
 
 import './OurStory.scss';
 
@@ -12,7 +12,7 @@ const ourStory = () => {
                 <div className="our-story-grid-container">
                     <div className="our-story-image-grid">
                         <div className="our-story-images">
-                            Images
+                            <img src="http://via.placeholder.com/750x1000?text=1" className="img-responsive" />
                         </div>
                     </div>
                     <div className="our-story-grid">
@@ -63,7 +63,7 @@ const ourStory = () => {
                     </div>
                 </div>
             </Wrapper>
-            <SlideShow />
+            <SimpleSlider />
         </div>
 
     )

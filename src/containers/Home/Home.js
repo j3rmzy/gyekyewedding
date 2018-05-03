@@ -30,7 +30,6 @@ class Home extends Component {
                                 <p>Are getting married!</p>
                                 <p className="date">Saturday 22<sup>nd</sup> September 2018</p>
                                 <Button title="RSVP!" clicked={this.goToRSVP} />
-                                {/* <a className="button" alt="RSVP Here">RSVP!</a> */}
                             </div>
                         </div>
                     </div>
