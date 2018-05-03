@@ -1,0 +1,26 @@
+@import '../../assets/sass/variables.scss';
+
+#rsvp-form {
+    background-color: #ffffff;
+    padding: 10px;
+
+    box-shadow:
+    0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+    0 10px 0 -5px $blue, /* The second layer */
+    0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+    0 20px 0 -10px $orange, /* The third layer */
+    0 20px 1px -9px rgba(0,0,0,0.3); /* The third layer shadow */
+
+    h2 {
+        font-size: 2.5em;
+
+        span {
+            display: block;
+
+            &:nth-child(2n+2):before {
+                content: "&";
+                display: block;
+            }
+        }
+    }
+}

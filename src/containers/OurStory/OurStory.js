@@ -12,7 +12,7 @@ const ourStory = () => {
                 <div className="our-story-grid-container">
                     <div className="our-story-image-grid">
                         <div className="our-story-images">
-                            <img src="http://via.placeholder.com/750x1000?text=1" className="img-responsive" />
+                            <img alt="Story" src="http://via.placeholder.com/750x1000?text=1" className="img-responsive" />
                         </div>
                     </div>
                     <div className="our-story-grid">

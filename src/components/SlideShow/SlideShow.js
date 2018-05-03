@@ -6,7 +6,6 @@ import './SlideShow.scss';
 class SimpleSlider extends Component {
     render() {
         var settings = {
-            dots: true,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
@@ -22,19 +21,19 @@ class SimpleSlider extends Component {
         return (
             <Slider {...settings}>
                 <div>
-                    <img src="http://via.placeholder.com/2500x450?text=1" />
+                    <img alt="1" src="http://via.placeholder.com/2500x450?text=1" />
                 </div>
                 <div>
-                    <img src="http://via.placeholder.com/2500x450?text=2" />
+                    <img alt="2" src="http://via.placeholder.com/2500x450?text=2" />
                 </div>
                 <div>
-                    <img src="http://via.placeholder.com/2500x450?text=3" />
+                    <img alt="3" src="http://via.placeholder.com/2500x450?text=3" />
                 </div>
                 <div>
-                    <img src="http://via.placeholder.com/2500x450?text=4" />
+                    <img alt="4" src="http://via.placeholder.com/2500x450?text=4" />
                 </div>
                 <div>
-                    <img src="http://via.placeholder.com/2500x450?text=5" />
+                    <img alt="5" src="http://via.placeholder.com/2500x450?text=5" />
                 </div>
             </Slider>
         )
