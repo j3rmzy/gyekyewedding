@@ -12,6 +12,11 @@
 
     .our-story-images {
         background-color: $grey;
+        margin-bottom: 36px;
+
+        @media screen and (min-width: $screen-sm) {
+            margin-bottom: 0;
+        }
     }
 
     .our-story-grid-container {
