@@ -18,22 +18,35 @@ const data = {
     details: null
 }
 
-const names = [
-    "Jermaine Gyekye",
-    "Michelle Cook"
-]
-
 class RSVPForm extends Component {
     state = {
-
+        users: {
+            ...data
+        },
+        error: null,
+        sending: false,
+        submitted: false
     }
 
     render() {
+        let {
+            attendees,
+            inviteType
+        } = this.state.users;
+
+        //Seperate names from object
+        const names = [];
+        for (let obj in this.state.users) {
+            if (obj.indexOf('person') > -1) {
+                names.push(data[obj]);
+            }
+        }
+
         return (
             <div id="rsvp-form">
                 <Names names={names} />
-                <InviteType inviteType={"allday"} />
-                <ReservedSeats reservedSeats={2}/>
+                <InviteType inviteType={inviteType} />
+                <ReservedSeats reservedSeats={attendees}/>
                 <FormInputs names={names}/>
                 <Button title={"submit"}/>
             </div>

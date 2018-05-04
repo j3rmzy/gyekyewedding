@@ -34,7 +34,7 @@ const formInputs = (props) => {
                 </div>
                 {props.names.map((name) => {
                     return (
-                        <div className="form-row">
+                        <div key={name} className="form-row">
                             <input id={name} type="checkbox" />
                             <label htmlFor={name}>{name}</label>
                         </div>

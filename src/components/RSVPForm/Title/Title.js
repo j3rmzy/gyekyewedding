@@ -8,7 +8,7 @@ const Title = (props) => {
             <h2>
                 {props.names.map((name) => {
                     return (
-                        <span>{name}</span>
+                        <span key={name}>{name}</span>
                     )
                 })}  
             </h2>
