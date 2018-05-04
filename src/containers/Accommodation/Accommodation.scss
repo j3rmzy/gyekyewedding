@@ -29,6 +29,12 @@
     .alternative-hotels {
         margin-bottom: 0;
         padding-top: 24px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $blue;
+        text-decoration: underline;
+        padding: 0;
 
         &.top {
             display: none;
