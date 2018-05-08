@@ -16,8 +16,9 @@ class DetailsPage extends Component {
             attendees: '',
             dietary: '',
             rsvp: false,
-            details: ''
+            details: []
         },
+        selectedAttendees: [],
         error: null,
         sending: false,
         submitted: false
@@ -32,7 +33,8 @@ class DetailsPage extends Component {
                     .then((res) => {
                         this.setState({
                             users: {
-                                name: res.data.name,
+                                personOne: res.data.personOne,
+                                personTwo: res.data.personTwo,
                                 attendees: res.data.attendees,
                                 rsvp: res.data.rsvp,
                                 inviteType: res.data.inviteType
@@ -58,6 +60,26 @@ class DetailsPage extends Component {
                 ...updatedRSVPForm
             }
         })
+    }
+
+    attendeesSelectionHandler = (event) => {
+        const newSelection = event.target.value;
+        let newSelectionArray;
+
+        if (this.state.selectedAttendees.indexOf(newSelection) > -1) {
+            newSelectionArray = this.state.selectedAttendees.filter((s) => {
+                return s !== newSelection
+            })
+        } else {
+            newSelectionArray = [...this.state.selectedAttendees, newSelection]
+        }
+
+        this.setState({
+            selectedAttendees: newSelectionArray
+        }, () => {
+            console.log(this.state.selectedAttendees);
+        });
+
     }
 
     onSubmitFormHandler = (event) => {
@@ -90,8 +112,12 @@ class DetailsPage extends Component {
     render() {
         return (
             <Aux>
-                {this.state.users.name ?
-                <RSVPForm users={this.state.users} />
+                {this.state.users.personOne ?
+                <RSVPForm 
+                    users={this.state.users}
+                    updateFormInputs={this.updateRSVPFormHander}
+                    selectedAttendees={this.state.selectedAttendees} 
+                    attendeeSelection={this.attendeesSelectionHandler} />
                 : <Loading />}
                 
                 {this.state.error ?
@@ -105,4 +131,4 @@ class DetailsPage extends Component {
 
 const authCondition = (authUser) => !!authUser;
 
-export default withAuthorization(authCondition)(DetailsPage);
+export default withAuthorization(authCondition) (DetailsPage);

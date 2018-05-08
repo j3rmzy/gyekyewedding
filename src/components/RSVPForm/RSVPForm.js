@@ -11,18 +11,23 @@ import './RSVPForm.scss';
 const rsvpForm = (props) => {
     //Seperate names from object
     const names = [];
-    // for (let obj in this.state.users) {
-    //     if (obj.indexOf('person') > -1) {
-    //         names.push(data[obj]);
-    //     }
-    // }
+    for (let obj in props.users) {
+        if (obj.indexOf('person') > -1) {
+            names.push(props.users[obj]);
+        }
+    }
 
     return (
         <div id="rsvp-form">
             <Names names={names} />
-            <InviteType inviteType={props.inviteType} />
-            <ReservedSeats reservedSeats={props.attendees}/>
-            <FormInputs names={names}/>
+            <InviteType inviteType={props.users.inviteType} />
+            <ReservedSeats reservedSeats={props.users.attendees}/>
+            <FormInputs 
+                names={names} 
+                changed={props.updateFormInputs}
+                rsvp={props.users.rsvp}
+                selectedAttendees={props.selectedAttendees}
+                attendeeSelection={props.attendeeSelection} />
             <Button title={"submit"}/>
         </div>
     )
