@@ -5,6 +5,7 @@ import { firebase } from '../../../firebase';
 import RSVPForm from '../../../components/RSVPForm/RSVPForm';
 import Loading from '../../../components/Loading/Loading';
 import Aux from '../../../hoc/Aux';
+import withAuthorization from '../../../hoc/withAuthorization';
 
 class DetailsPage extends Component {
     state = {
@@ -102,4 +103,6 @@ class DetailsPage extends Component {
     }
 }
 
-export default DetailsPage;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(DetailsPage);
