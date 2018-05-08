@@ -1,34 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Aux from '../../hoc/Aux';
 import Button from '../../components/UI/Button/Button';
 
 import './LoginForm.scss';
 
-class LoginForm extends Component {
-    state = {
-        disabled: false
-    }
-
-    submitLogin = (event) => {
-        event.preventDefault();
- 
-        console.log('TEST');
-    }
-
-    render() {
-        return (
-            <Aux>
-                <p>Please enter the unique code from your invitation</p>
-                <form className="login-form" onSubmit={this.submitLogin}>
-                    <input />
-                    <Button title="Login" 
-                        clicked={this.submitLogin} 
-                        disabled={this.state.disabled} />
-                </form>
-            </Aux>
-        )
-    }
+const loginForm = (props) => {
+    return (
+        <Aux>
+            <p>Please enter the unique code from your invitation</p>
+            <form className="login-form" onSubmit={props.submitLogin}>
+                <input onChange={props.changed} />
+                <Button
+                    title="Login" 
+                    clicked={props.submitLogin} 
+                    disabled={props.disabled} />
+            </form>
+        </Aux>
+    )
 }
 
-export default LoginForm;
+export default loginForm;

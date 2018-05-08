@@ -50,7 +50,8 @@ class Layout extends Component {
                         setActiveClass={this.setActiveClassHandler} />
                     <TopDrawer 
                         open={this.state.showTopDraw}
-                        setActiveClass={this.setActiveClassHandler} />
+                        setActiveClass={this.setActiveClassHandler}
+                        closed={this.topDrawCloseHandler} />
                 </div>
                 <main className="main">
                     {this.props.children}
