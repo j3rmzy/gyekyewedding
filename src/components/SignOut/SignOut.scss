@@ -1,0 +1,9 @@
+@import '../../assets/sass/variables.scss';
+
+.signout {
+   @media screen and (min-width: $screen-sm) {
+       display: block;
+       float: right;
+       width: 200px !important;
+   }
+}

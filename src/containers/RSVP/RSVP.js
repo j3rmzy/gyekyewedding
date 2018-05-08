@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
-import LoginPage from '../RSVP/LoginPage/LoginPage';
-import RSVPForm from '../../components/RSVPForm/RSVPForm';
+import LoginPage from './LoginPage/LoginPage';
+import DetailsPage from './DetailsPage/DetailsPage';
 
 import './RSVP.scss';
 
@@ -16,7 +16,7 @@ class RSVP extends Component {
                     <div className="rsvp-inner">
                         <Switch>
                             <Route path={`${this.props.match.url}/login`} component={LoginPage} />
-                            <Route path={`${this.props.match.url}/form`} component={RSVPForm} />
+                            <Route path={`${this.props.match.url}/:uid`} component={DetailsPage} />
                         </Switch>
                     </div>
                 </Wrapper>

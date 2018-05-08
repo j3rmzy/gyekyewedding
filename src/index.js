@@ -6,6 +6,8 @@ import './index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+require('dotenv').config();
+
 ReactDOM.render(
     <Router>
         <App />

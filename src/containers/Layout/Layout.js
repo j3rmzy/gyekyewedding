@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { auth } from '../../firebase';
 
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import TopDrawer from '../../components/Navigation/TopDrawer/TopDrawer';
@@ -37,7 +38,11 @@ class Layout extends Component {
     }
 
     signOutHandler = () => {
+        auth.doSignOut().then(() => {
+            this.props.history.push('/');
+        });
 
+        this.topDrawCloseHandler();
     }
 
 
@@ -47,11 +52,15 @@ class Layout extends Component {
                 <div>
                     <Toolbar 
                         open={this.topDrawOpenHandler}
-                        setActiveClass={this.setActiveClassHandler} />
+                        setActiveClass={this.setActiveClassHandler}
+                        signout={this.signOutHandler}
+                        authUser={this.props.authUser} />
                     <TopDrawer 
                         open={this.state.showTopDraw}
                         setActiveClass={this.setActiveClassHandler}
-                        closed={this.topDrawCloseHandler} />
+                        closed={this.topDrawCloseHandler}
+                        signout={this.signOutHandler} 
+                        authUser={this.props.authUser} />
                 </div>
                 <main className="main">
                     {this.props.children}

@@ -12,28 +12,29 @@ import Gifts from './containers/Gifts/Gifts';
 import RSVP from './containers/RSVP/RSVP';
 
 import Aux from './hoc/Aux';
+import withAuthentication from './hoc/withAuthentication';
 
 class App extends Component {
-  render() {
-    const Homepage = () => (
-      <Aux>
-          <Home />
-          <OurStory />
-          <Details />
-          <Accommodation />
-          <Gifts />
-      </Aux>
-    );
+    render() {
+        const Homepage = () => (
+            <Aux>
+                <Home />
+                <OurStory />
+                <Details />
+                <Accommodation />
+                <Gifts />
+            </Aux>
+        );
 
-    return (
-      <Layout>
-        <Switch>
-          <Route exact path='/' component={Homepage} />
-          <Route path='/rsvp' component={RSVP} />
-        </Switch>
-      </Layout>
-    );
-  }
+        return (
+            <Layout>
+                <Switch>
+                    <Route exact path='/' component={Homepage} />
+                    <Route path='/rsvp' component={RSVP} />
+                </Switch>
+            </Layout>
+        );
+    }
 }
 
-export default App;
+export default withAuthentication(App);

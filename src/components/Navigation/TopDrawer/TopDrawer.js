@@ -17,7 +17,8 @@ const topDrawer = (props) => {
             <BackDrop show={props.open} clicked={props.closed} />
             <nav className={attachedClasses.join(' ')}>
                 <NavigationItems 
-                    clicked={props.setActiveClass} />
+                    clicked={props.setActiveClass}
+                    signout={props.signout} />
             </nav>
         </Aux>
     )

@@ -37,7 +37,7 @@ class LoginPage extends Component {
                         disabled: false
                     }
                 })
-                this.props.history.push('form');
+                this.props.history.push(res.uid);
             }).catch((error) => {
                 this.setState({
                     error: 'There seems to be a problem with your unique code. Please double check and try again!',
