@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Checkbox from '../../UI/Checkboxes/Checkboxes';
+
 const formInputs = (props) => {
     return (
         <div className="form-inputs">
@@ -40,14 +42,11 @@ const formInputs = (props) => {
                 </div>
                 {props.names.map((name) => {
                     return (
-                        <div key={name} className="form-row">
-                            <input id={name} 
-                                type="checkbox" 
-                                name="details" 
-                                value={name} 
-                                checked={props.selectedAttendees.indexOf(name) > -1}
-                                onChange={props.attendeeSelection} />
-                            <label htmlFor={name}>{name}</label>
+                        <div key={name} className="form-row-checkbox">
+                            <Checkbox
+                                label={name}
+                                selectedAttendees={props.selectedAttendees}
+                                handleCheckboxChange={props.attendeeSelection} />
                         </div>
                     )
                 })}

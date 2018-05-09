@@ -16,12 +16,15 @@ class DetailsPage extends Component {
             attendees: '',
             dietary: '',
             rsvp: false,
-            details: []
+            selectedAttendees: []
         },
-        selectedAttendees: [],
         error: null,
         sending: false,
         submitted: false
+    }
+
+    componentWillMount = () => {
+        this.selectedCheckboxes = new Set();
     }
 
     componentDidMount() {
@@ -37,9 +40,14 @@ class DetailsPage extends Component {
                                 personTwo: res.data.personTwo,
                                 attendees: res.data.attendees,
                                 rsvp: res.data.rsvp,
-                                inviteType: res.data.inviteType
+                                inviteType: res.data.inviteType,
+                                selectedAttendees: res.data.selectedAttendees
                             }
                         })
+
+                        for (const value in res.data.selectedAttendees) {
+                            this.selectedCheckboxes.add(res.data.selectedAttendees[value]);
+                        }                    
                     }).catch((error) => {
                         this.setState({
                             error: error
@@ -62,24 +70,14 @@ class DetailsPage extends Component {
         })
     }
 
-    attendeesSelectionHandler = (event) => {
-        const newSelection = event.target.value;
-        let newSelectionArray;
+    attendeesSelectionHandler = (label) => {
+        const newSelection = label;
 
-        if (this.state.selectedAttendees.indexOf(newSelection) > -1) {
-            newSelectionArray = this.state.selectedAttendees.filter((s) => {
-                return s !== newSelection
-            })
+        if (this.selectedCheckboxes.has(newSelection)) {
+            this.selectedCheckboxes.delete(newSelection)
         } else {
-            newSelectionArray = [...this.state.selectedAttendees, newSelection]
+            this.selectedCheckboxes.add(newSelection)
         }
-
-        this.setState({
-            selectedAttendees: newSelectionArray
-        }, () => {
-            console.log(this.state.selectedAttendees);
-        });
-
     }
 
     onSubmitFormHandler = (event) => {
@@ -116,7 +114,6 @@ class DetailsPage extends Component {
                 <RSVPForm 
                     users={this.state.users}
                     updateFormInputs={this.updateRSVPFormHander}
-                    selectedAttendees={this.state.selectedAttendees} 
                     attendeeSelection={this.attendeesSelectionHandler} />
                 : <Loading />}
                 

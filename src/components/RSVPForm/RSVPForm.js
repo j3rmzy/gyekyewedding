@@ -26,7 +26,7 @@ const rsvpForm = (props) => {
                 names={names} 
                 changed={props.updateFormInputs}
                 rsvp={props.users.rsvp}
-                selectedAttendees={props.selectedAttendees}
+                selectedAttendees={props.users.selectedAttendees}
                 attendeeSelection={props.attendeeSelection} />
             <Button title={"submit"}/>
         </div>
