@@ -3,6 +3,7 @@ import axios from '../../../axios/database';
 import { firebase } from '../../../firebase';
 
 import RSVPForm from '../../../components/RSVPForm/RSVPForm';
+import ThanksPage from '../ThanksPage/ThanksPage';
 import Loading from '../../../components/Loading/Loading';
 import Aux from '../../../hoc/Aux';
 import withAuthorization from '../../../hoc/withAuthorization';
@@ -47,7 +48,8 @@ class DetailsPage extends Component {
 
                         for (const value in res.data.selectedAttendees) {
                             this.selectedCheckboxes.add(res.data.selectedAttendees[value]);
-                        }                    
+                        }
+
                     }).catch((error) => {
                         this.setState({
                             error: error
@@ -83,14 +85,19 @@ class DetailsPage extends Component {
     onSubmitFormHandler = (event) => {
         event.preventDefault();
 
-        this.setState({
-            sending: true
-        })
-
         firebase.auth.currentUser.getIdToken(true)
             .then((token) => {
                 const url = `${'/users/' + this.props.match.params.uid + '.json?auth=' + token}`;
-                const users = this.state.users;
+                const users = {
+                    ...this.state.users
+                }
+
+                if (users.rsvp === 'no') {
+                    users['selectedAttendees'] = [];
+                    this.selectedCheckboxes = [];
+                } else {
+                    users['selectedAttendees'] = [...this.selectedCheckboxes];
+                }
 
                 axios.put(url, users)
                     .then((res) => {
@@ -103,19 +110,22 @@ class DetailsPage extends Component {
                             error: error.message
                         })
                     })
-
             })
     }
 
     render() {
         return (
             <Aux>
-                {this.state.users.personOne ?
-                <RSVPForm 
-                    users={this.state.users}
-                    updateFormInputs={this.updateRSVPFormHander}
-                    attendeeSelection={this.attendeesSelectionHandler} />
-                : <Loading />}
+                {!this.state.submitted ? 
+                    this.state.users.personOne ?
+                        <RSVPForm 
+                            submitForm={this.onSubmitFormHandler}
+                            users={this.state.users}
+                            updateFormInputs={this.updateRSVPFormHander}
+                            attendeeSelection={this.attendeesSelectionHandler} />
+                        : <Loading />
+                    : <ThanksPage />
+                }
                 
                 {this.state.error ?
                 <p>{this.state.error.message}</p>
