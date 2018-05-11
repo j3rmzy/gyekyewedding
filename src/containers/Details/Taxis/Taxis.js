@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Wrapper from '../../../hoc/Wrapper/Wrapper';
+import SimpleSlider from '../../../components/SlideShow/SlideShow';
+
 
 const taxis = () => {
     return (
@@ -12,6 +14,7 @@ const taxis = () => {
                     <p><a tel="01452 523000">01452 523000</a></p>
                 </div>
             </Wrapper>
+            <SimpleSlider />
         </div>
     )
 }

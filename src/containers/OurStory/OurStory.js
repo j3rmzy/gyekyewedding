@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
-import SimpleSlider from '../../components/SlideShow/SlideShow';
 
 import './OurStory.scss';
 
@@ -63,7 +62,6 @@ const ourStory = () => {
                     </div>
                 </div>
             </Wrapper>
-            <SimpleSlider />
         </div>
 
     )

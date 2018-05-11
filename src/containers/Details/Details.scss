@@ -3,7 +3,7 @@
 .details {
     background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
     background-blend-mode: multiply;
-    padding: 0 0 90px;
+    padding: 0;
     background-color: $blue;
     color: #ffffff;
     text-align: center;
@@ -38,6 +38,10 @@
         grid-template-columns: 47% 47%;
         grid-row-gap: 0;
         grid-column-gap: 6%;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $screen-md) {
         margin-bottom: 60px;
     }
 
