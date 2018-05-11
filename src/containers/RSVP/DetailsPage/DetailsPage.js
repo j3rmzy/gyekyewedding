@@ -22,7 +22,7 @@ class DetailsPage extends Component {
         },
         error: null,
         sending: false,
-        submitted: true
+        submitted: false
     }
 
     componentWillMount = () => {

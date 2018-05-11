@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { auth } from '../../../firebase';
+import { Redirect } from 'react-router-dom';
 
 import LoginForm from '../../../components/LoginForm/LoginForm';
 import Aux from '../../../hoc/Aux';
+import AuthUserContext from '../../../components/AuthUserContext/AuthUserContext';
 
 class LoginPage extends Component {
     state = {
@@ -65,6 +67,12 @@ class LoginPage extends Component {
     render() {
         return (
             <Aux>
+                <AuthUserContext.Consumer>
+                    {authUser => authUser
+                        ? <Redirect to={`${authUser.uid}`} />
+                        : null }
+                </AuthUserContext.Consumer>
+
                 <LoginForm 
                     submitLogin={this.onSubmitHandler}
                     changed={this.loginDetailsHandler}
