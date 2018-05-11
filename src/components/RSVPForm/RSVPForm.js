@@ -26,9 +26,11 @@ const rsvpForm = (props) => {
                     names={names} 
                     changed={props.updateFormInputs}
                     rsvp={props.users.rsvp}
+                    dietary={props.users.dietary}
+                    attendees={props.users.attendees}
                     selectedAttendees={props.users.selectedAttendees}
                     attendeeSelection={props.attendeeSelection} />
-                <input type="submit" className="button" value="submit" disabled={props.sending} />
+                <input type="submit" className="button" value="submit" disabled={props.disabled} />
             </form>
         </div>
     )

@@ -42,7 +42,8 @@ class DetailsPage extends Component {
                             attendees,
                             rsvp,
                             inviteType,
-                            selectedAttendees
+                            selectedAttendees,
+                            dietary
                         } = res.data;
 
                         this.setState({
@@ -52,7 +53,8 @@ class DetailsPage extends Component {
                                 attendees: attendees,
                                 rsvp: rsvp,
                                 inviteType: inviteType,
-                                selectedAttendees: selectedAttendees
+                                selectedAttendees: selectedAttendees,
+                                dietary: dietary
                             }
                         })
 

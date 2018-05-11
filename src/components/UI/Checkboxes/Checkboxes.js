@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Aux from '../../../hoc/Aux';
+
 class Checkboxes extends Component {
     state = {
         isChecked: false
@@ -35,7 +37,7 @@ class Checkboxes extends Component {
         const { isChecked } = this.state;
 
         return (
-            <div className="checkbox">
+            <Aux>
                 <input id={label}
                     type="checkbox"
                     value={label}
@@ -43,7 +45,7 @@ class Checkboxes extends Component {
                     name="details"
                     onChange={this.toggleCheckboxChangeHandler} />
                     <label htmlFor={label}>{label}</label>
-            </div>
+            </Aux>
         )
     }
 }

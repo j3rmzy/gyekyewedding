@@ -3,10 +3,11 @@ import React from 'react';
 import Checkbox from '../../UI/Checkboxes/Checkboxes';
 
 const formInputs = (props) => {
+    console.log(props.attendees);
     return (
         <div className="form-inputs">
             <div className="form-row">
-                <span>Let us know if you&apos;ll be joining us?</span>
+                <span>We hope you can join us?</span>
             </div>
             <div className="form-row radio">
                 <input type="radio" 
@@ -27,7 +28,7 @@ const formInputs = (props) => {
                     <label htmlFor="RSVPNo">Will be there in spirit</label>
             </div>
             {props.attendees >= 2
-                ? <div className="form-row">
+                ? <div className="form-row radio">
                     <input type="radio" 
                         name="rsvp" 
                         value="other" 
@@ -44,7 +45,7 @@ const formInputs = (props) => {
                 </div>
                 {props.names.map((name) => {
                     return (
-                        <div key={name} className="form-row-checkbox">
+                        <div key={name} className="form-row checkbox">
                             <Checkbox
                                 label={name}
                                 selectedAttendees={props.selectedAttendees}
@@ -56,8 +57,9 @@ const formInputs = (props) => {
             : null}
             <div className="form-row dietary-req">
                 <label htmlFor="dietary">Any dietary requirements?</label>
-                <textarea id="dietary"
-                    name="dietary" />
+                <textarea id="dietary" name="dietary" 
+                    onChange={props.changed}
+                    value={props.dietary} />
             </div>
         </div>
     )

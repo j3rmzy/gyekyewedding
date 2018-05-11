@@ -54,9 +54,14 @@
         }
     }
 
-    .radio {
+    .radio,
+    .checkbox {
         display: flex; 
         align-items: center;
+    }
+
+    .checkbox {
+        margin-bottom: 3px !important;
     }
 
     .invite-type {
@@ -98,6 +103,7 @@
             & + label {
                 margin-left: 12px;
                 display: block;
+                cursor: pointer;
             }
         }
 
@@ -105,12 +111,14 @@
             width: 100%;
             border: 1px solid #cccccc;
             height: 100px;
+            padding: 7px;
+            font-weight: 300;
         }
 
         .not-all {
             padding: 10px;
             background-color: #f6f6f6;
-            margin-bottom: 15px;
+            margin: 20px 0;
         }
     }
 }
