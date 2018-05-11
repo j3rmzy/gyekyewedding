@@ -23,7 +23,8 @@ class LoginPage extends Component {
         } = this.state.loginDetails;
 
         this.setState({
-            disabled: true
+            disabled: true,
+            error: ''
         })
 
         auth.doSignInWithEmailAndPassword(email, password)
@@ -67,9 +68,8 @@ class LoginPage extends Component {
                 <LoginForm 
                     submitLogin={this.onSubmitHandler}
                     changed={this.loginDetailsHandler}
-                    disabled={this.state.disabled} />
-
-                {this.state.error ? <p>{this.state.error}</p> : null}
+                    disabled={this.state.disabled}
+                    error={this.state.error} />
             </Aux>
 
         )

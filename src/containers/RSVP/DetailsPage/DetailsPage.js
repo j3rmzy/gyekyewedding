@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from '../../../axios/database';
-import { firebase } from '../../../firebase';
+import { firebase, auth } from '../../../firebase';
 
 import RSVPForm from '../../../components/RSVPForm/RSVPForm';
 import ThanksPage from '../ThanksPage/ThanksPage';
 import Loading from '../../../components/Loading/Loading';
 import Aux from '../../../hoc/Aux';
 import withAuthorization from '../../../hoc/withAuthorization';
+import Error from '../../../components/Error/Error';
 
 class DetailsPage extends Component {
     state = {
@@ -21,7 +22,7 @@ class DetailsPage extends Component {
         },
         error: null,
         sending: false,
-        submitted: false
+        submitted: true
     }
 
     componentWillMount = () => {
@@ -82,6 +83,12 @@ class DetailsPage extends Component {
         }
     }
 
+    goHomeHandler = () => {
+        auth.doSignOut().then(() => {
+            this.props.history.push('/');
+        });
+    }
+
     onSubmitFormHandler = (event) => {
         event.preventDefault();
 
@@ -98,6 +105,10 @@ class DetailsPage extends Component {
                 } else {
                     users['selectedAttendees'] = [...this.selectedCheckboxes];
                 }
+
+                this.setState({
+                    sending: true
+                });
 
                 axios.put(url, users)
                     .then((res) => {
@@ -122,13 +133,14 @@ class DetailsPage extends Component {
                             submitForm={this.onSubmitFormHandler}
                             users={this.state.users}
                             updateFormInputs={this.updateRSVPFormHander}
-                            attendeeSelection={this.attendeesSelectionHandler} />
+                            attendeeSelection={this.attendeesSelectionHandler}
+                            disabled={this.state.sending} />
                         : <Loading />
-                    : <ThanksPage />
+                    : <ThanksPage clicked={this.goHomeHandler} />
                 }
                 
                 {this.state.error ?
-                <p>{this.state.error.message}</p>
+                <Error error={this.state.error.message} />
                 : null}
 
             </Aux>

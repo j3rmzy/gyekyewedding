@@ -28,7 +28,7 @@ const rsvpForm = (props) => {
                     rsvp={props.users.rsvp}
                     selectedAttendees={props.users.selectedAttendees}
                     attendeeSelection={props.attendeeSelection} />
-                <input type="submit" className="button" value="submit" />
+                <input type="submit" className="button" value="submit" disabled={props.sending} />
             </form>
         </div>
     )

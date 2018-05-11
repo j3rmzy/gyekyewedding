@@ -52,7 +52,7 @@ const formInputs = (props) => {
                 })}
             </div>
             : null}
-            <div className="form-row">
+            <div className="form-row dietary-req">
                 <label htmlFor="dietary">Any dietary requirements?</label>
                 <textarea id="dietary"
                     name="dietary" />
