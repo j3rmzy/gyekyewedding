@@ -8,33 +8,35 @@ const formInputs = (props) => {
             <div className="form-row">
                 <span>Let us know if you&apos;ll be joining us?</span>
             </div>
-            <div className="form-row">
+            <div className="form-row radio">
                 <input type="radio" 
                     name="rsvp" 
                     value="yes" 
                     id="RSVPYes"
                     onChange={props.changed}
                     checked={props.rsvp === 'yes'} />
-                    <label htmlFor="RSVPYes">Yes</label>
+                    <label htmlFor="RSVPYes">Wouldn&apos;t miss it for the world.</label>
             </div>
-            <div className="form-row">
+            <div className="form-row radio">
                 <input type="radio" 
                     name="rsvp" 
                     value="no" 
                     id="RSVPNo"
                     onChange={props.changed}
                     checked={props.rsvp === 'no'} />
-                    <label htmlFor="RSVPNo">No</label>
+                    <label htmlFor="RSVPNo">Will be there in spirit</label>
             </div>
-            <div className="form-row">
-                <input type="radio" 
-                    name="rsvp" 
-                    value="other" 
-                    id="RSVPOther"
-                    onChange={props.changed}
-                    checked={props.rsvp === 'other'} />
-                <label htmlFor="RSVPOther">Unfortunately, not all of us can make it</label>
-            </div>
+            {props.attendees >= 2
+                ? <div className="form-row">
+                    <input type="radio" 
+                        name="rsvp" 
+                        value="other" 
+                        id="RSVPOther"
+                        onChange={props.changed}
+                        checked={props.rsvp === 'other'} />
+                    <label htmlFor="RSVPOther">Unfortunately, not all of us can make it</label>
+                </div>
+                : null}
             {props.rsvp === 'other' ?
             <div className="not-all">
                 <div className="form-row">

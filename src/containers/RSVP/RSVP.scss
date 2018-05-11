@@ -2,10 +2,14 @@
 
 .rsvp {
     background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
-    padding: 100px 0 0;
+    padding: 60px 0 40px;
     color: $blue;
     min-height: 100vh;
     text-align: center;
+
+    @media screen and (min-width: $screen-sm) {
+        padding-top: 100px;
+    }
 
     h1 {
         letter-spacing: 10px;

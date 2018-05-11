@@ -36,19 +36,28 @@ class DetailsPage extends Component {
 
                 axios.get(url)
                     .then((res) => {
+                        const {
+                            personOne,
+                            personTwo,
+                            attendees,
+                            rsvp,
+                            inviteType,
+                            selectedAttendees
+                        } = res.data;
+
                         this.setState({
                             users: {
-                                personOne: res.data.personOne,
-                                personTwo: res.data.personTwo,
-                                attendees: res.data.attendees,
-                                rsvp: res.data.rsvp,
-                                inviteType: res.data.inviteType,
-                                selectedAttendees: res.data.selectedAttendees
+                                personOne: personOne,
+                                personTwo: personTwo,
+                                attendees: attendees,
+                                rsvp: rsvp,
+                                inviteType: inviteType,
+                                selectedAttendees: selectedAttendees
                             }
                         })
 
-                        for (const value in res.data.selectedAttendees) {
-                            this.selectedCheckboxes.add(res.data.selectedAttendees[value]);
+                        for (const value in selectedAttendees) {
+                            this.selectedCheckboxes.add(selectedAttendees[value]);
                         }
 
                     }).catch((error) => {

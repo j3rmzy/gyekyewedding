@@ -11,7 +11,7 @@ const rsvpForm = (props) => {
     //Seperate names from object
     const names = [];
     for (let obj in props.users) {
-        if (obj.indexOf('person') > -1) {
+        if ((props.users[obj]) && (obj.indexOf('person') > -1)) {
             names.push(props.users[obj]);
         }
     }

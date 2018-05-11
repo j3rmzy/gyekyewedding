@@ -3,7 +3,7 @@
 .rsvp-inner {
     @media screen and (min-width: $screen-sm) {
         padding-bottom: 50px;
-        margin-top: 50px;
+        margin-top: 36px;
     }
 
     @media screen and (min-width: $screen-md) {
@@ -54,6 +54,11 @@
         }
     }
 
+    .radio {
+        display: flex; 
+        align-items: center;
+    }
+
     .invite-type {
         text-transform: uppercase;
         padding: 10px 0;
@@ -91,7 +96,7 @@
             float: left;
 
             & + label {
-                margin-left: 20px;
+                margin-left: 12px;
                 display: block;
             }
         }
