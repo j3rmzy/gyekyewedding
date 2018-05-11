@@ -6,11 +6,13 @@ class Checkboxes extends Component {
     }
 
     componentDidMount() {
-        if (this.props.selectedAttendees.indexOf(this.props.label) > -1) {
-            this.setState({
-                isChecked: true
-            })
-        };
+        if (this.props.selectedAttendees) {
+            if (this.props.selectedAttendees.indexOf(this.props.label) > -1) {
+                this.setState({
+                    isChecked: true
+                })
+            };
+        }
     }
 
     toggleCheckboxChangeHandler = () => {
