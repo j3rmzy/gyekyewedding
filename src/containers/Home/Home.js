@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Wrapper from '../../hoc/Wrapper/Wrapper';
 import Button from '../../components/UI/Button/Button';
 
-import MJIcon from '../../assets/images/mj-icon.svg';
+import MJIcon from '../../assets/images/mj-icon.png';
 
 import './Home.scss';
 
