@@ -1,0 +1,19 @@
+.error-alert {
+    margin: 12px;
+    color: #a94442;
+    display: inline-block;
+    padding: 5px 7px;
+
+    background-color: #f2dede;
+    max-width: 60%;
+
+    strong {
+        font-weight: 500;
+    }
+}
+
+input {
+    &.error {
+        border: 1px solid #a94442;
+    }
+}

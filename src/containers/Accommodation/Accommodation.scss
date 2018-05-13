@@ -1,0 +1,61 @@
+@import '../../assets/sass/variables.scss';
+
+.accommodation {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    background-blend-mode: multiply;
+    padding: 50px 0 0;
+    text-align: center;
+    color: $blue;
+
+
+    h3 {
+        font-size: 3em;
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
+    }
+
+    a {
+        font-weight: 400;
+        color: $blue;
+    }
+
+    .map {
+        margin: 24px 0 0;
+    }
+
+    .alternative-hotels {
+        margin-bottom: 0;
+        padding-top: 24px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $blue;
+        text-decoration: underline;
+        padding: 0;
+
+        &.top {
+            display: none;
+
+            @media screen and (min-width: $screen-sm) {
+                display: block;
+            }
+        }
+
+        &.bottom {
+            display: block;
+
+            @media screen and (min-width: $screen-sm) {
+                display: none;
+            }
+        }
+    }
+
+    .details-grid-container {
+        @media screen and (min-width: $screen-sm) {
+            margin-bottom: 0;
+        }
+    }
+}

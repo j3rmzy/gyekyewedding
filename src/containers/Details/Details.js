@@ -8,7 +8,7 @@ import './Details.scss';
 
 const Details = () => {
     return (
-        <div className="details">
+        <div className="details" id="church">
             <h3>Details</h3>
             <Church />
             <Reception />

@@ -1,0 +1,18 @@
+@import '../../assets/sass/variables.scss';
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-slider {
+    display: none;
+
+    @media screen and (min-width: $screen-sm) {
+        display: block;
+        margin-top: 60px;
+        background-color: #ffffff;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+}

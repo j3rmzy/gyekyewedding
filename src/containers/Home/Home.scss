@@ -1,6 +1,8 @@
+@import '../../assets/sass/variables.scss';
+
 .home {
     background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
-    background-color: #e6786f;
+    background-color: $orange;
     background-blend-mode: multiply;
     text-align: center;
     padding: 100px 0 165px;
@@ -13,8 +15,24 @@
         line-height: 0.4;
         margin-bottom: 36px;
 
+        @media screen and (min-width: $screen-sm) {
+            line-height: 0.8;
+            margin-bottom: 12px;
+        }
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 7em;
+        }
+
         span {
             font-size: 0.5em;
+            display: block;
+            margin: 10px 0;
+
+            @media screen and (min-width: $screen-sm) {
+                display: inline;
+                margin: 0;
+            }
         }
     }
 
@@ -23,21 +41,56 @@
         font-size: 1.5em;
         font-weight: 400;
         margin-bottom: 6px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 2em;
+        }
     }
 
     .date {
         font-size: 1em;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 1.25em;
+        }
     }
 
     .home-grid-container {
         display: grid;
-        grid-column-gap: 50px;
-        grid-row-gap: 50px;
+        grid-row-gap: 36px;
+
+        @media screen and (min-width: $screen-sm) {
+            grid-template-columns: 50% 50%;
+            grid-row-gap: 0;
+        }
+
+        .icon-grid {
+            @media screen and (min-width: $screen-sm) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+        }
+
+        .title-grid {
+            @media screen and (min-width: $screen-sm) {
+                grid-column-start: 1;
+                grid-row-start: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+            }
+        }
     }
 
     .icon-container {
         height: 100px;
         text-align: center;
+
+        @media screen and (min-width: $screen-sm) {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .mj-icon {

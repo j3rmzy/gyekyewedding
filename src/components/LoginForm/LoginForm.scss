@@ -1,0 +1,30 @@
+@import '../../assets/sass/variables.scss';
+
+.login-form {
+    input {
+        padding: 10px;
+        font-size: 1.2em;
+        width: 100%;
+        margin-bottom: 6px;
+        font-weight: 500;
+
+        &disabled {
+            background-color: #cccccc;
+            color: #ffffff;
+            cursor: not-allowed;
+            box-shadow: none !important;
+            opacity: 0.5;
+        }
+    }
+
+    .button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type="text"] {
+        &.error {
+            border: 1px solid #ffffff;
+        }
+    }
+}

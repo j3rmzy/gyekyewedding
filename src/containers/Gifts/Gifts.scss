@@ -1,0 +1,29 @@
+@import '../../assets/sass/variables.scss';
+
+.gifts {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    background-blend-mode: multiply;
+    padding: 12px 0 50px;
+    text-align: center;
+    color: $blue;
+
+
+    h3 {
+        font-size: 3em;
+        margin-bottom: 24px;
+        padding-top: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
+    }
+
+    a {
+        font-weight: 400;
+        color: $blue;
+    }
+
+    .kuoni-logo {
+        margin: 24px 0;
+    }
+}
