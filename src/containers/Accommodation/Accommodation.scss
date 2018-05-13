@@ -34,7 +34,11 @@
         cursor: pointer;
         color: $blue;
         text-decoration: underline;
-        padding: 0;
+        padding: 24px 0 0 0;
+
+        @media screen and (min-width: $screen-sm) {
+            padding-top: 0;
+        }
 
         &.top {
             display: none;
