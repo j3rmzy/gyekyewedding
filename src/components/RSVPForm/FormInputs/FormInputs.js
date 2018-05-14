@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Checkbox from '../../UI/Checkboxes/Checkboxes';
 
 const formInputs = (props) => {
-    console.log(props.attendees);
     return (
         <div className="form-inputs">
             <div className="form-row">
@@ -63,6 +63,15 @@ const formInputs = (props) => {
             </div>
         </div>
     )
+}
+
+formInputs.propTypes = {
+    onChange: PropTypes.func,
+    rsvp: PropTypes.string,
+    label: PropTypes.string,
+    selectedAttendees: PropTypes.array.isRequired,
+    handleCheckboxChange: PropTypes.func,
+    value: PropTypes.string
 }
 
 export default formInputs;

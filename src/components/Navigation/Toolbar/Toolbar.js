@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Toolbar.scss';
 
@@ -16,6 +17,12 @@ const toolbar = (props) => {
             </nav>
         </header>
     )
+}
+
+toolbar.propTypes = {
+    open: PropTypes.func,
+    clicked: PropTypes.func,
+    signout: PropTypes.func
 }
 
 export default toolbar;

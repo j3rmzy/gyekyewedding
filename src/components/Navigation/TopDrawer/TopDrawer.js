@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BackDrop from '../../UI/Backdrop/Backdrop';
 import NavigationItems from '../NavigationItems/NavigationItems';
@@ -22,6 +23,12 @@ const topDrawer = (props) => {
             </nav>
         </Aux>
     )
+}
+
+topDrawer.propTypes = {
+    show: PropTypes.func,
+    clicked: PropTypes.func,
+    signout: PropTypes.func
 }
 
 export default topDrawer;

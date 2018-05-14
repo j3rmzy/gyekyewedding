@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Aux from '../../hoc/Aux';
 import Button from '../../components/UI/Button/Button';
@@ -22,6 +23,14 @@ const loginForm = (props) => {
             </form>
         </Aux>
     )
+}
+
+loginForm.propTypes = {
+    onSubmit: PropTypes.func,
+    onChange: PropTypes.func,
+    error: PropTypes.string,
+    clicked: PropTypes.func,
+    disabled: PropTypes.bool.isRequired
 }
 
 export default loginForm;

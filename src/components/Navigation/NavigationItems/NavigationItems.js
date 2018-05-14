@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 import './NavigationItems.scss';
@@ -37,6 +38,11 @@ const navigationItems = (props) => {
             </AuthUserContext.Consumer>
         </Aux>
     )
+}
+
+navigationItems.propsTypes = {
+    onClick: PropTypes.func,
+    signout: PropTypes.func
 }
 
 export default navigationItems;
