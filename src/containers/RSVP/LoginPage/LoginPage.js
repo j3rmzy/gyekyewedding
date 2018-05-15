@@ -29,7 +29,10 @@ class LoginPage extends Component {
             error: ''
         })
 
-        auth.doSignInWithEmailAndPassword(email, password)
+        const lowerCaseEmail = email.toLowerCase();
+        const lowerCasePassword = password.toLowerCase();
+
+        auth.doSignInWithEmailAndPassword(lowerCaseEmail, lowerCasePassword)
             .then((res) => {
                 this.setState(() => {
                     return {

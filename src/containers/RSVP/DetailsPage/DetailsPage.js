@@ -95,9 +95,7 @@ class DetailsPage extends Component {
     }
 
     goHomeHandler = () => {
-        auth.doSignOut().then(() => {
-            this.props.history.push('/');
-        });
+        auth.doSignOut();
     }
 
     onSubmitFormHandler = (event) => {

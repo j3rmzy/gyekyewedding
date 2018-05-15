@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const thanksPage = (props) => {
     return (
         <div className="thank-you">
             <p>Thank you for letting us know your availablility.</p>
-            <button className="button thank-you" onClick={props.clicked}>Take me back to the homepage</button>
+            <p><strong><Link to="/" onClick={props.clicked}>Back to homepage</Link></strong></p>
         </div>
     )
 }
