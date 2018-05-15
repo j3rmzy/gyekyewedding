@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BackDrop from '../Backdrop/Backdrop';
 
@@ -16,5 +17,10 @@ const modal = (props) => {
     )
 }
 
+modal.propTypes = {
+    show: PropTypes.func,
+    clicked: PropTypes.func,
+    onClick: PropTypes.func
+}
 
 export default modal;

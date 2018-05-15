@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const iframeStyle = {
     border: 0,
@@ -6,7 +7,7 @@ const iframeStyle = {
     height: '100%'
 }
 
-const IFrame = (props) => {
+const iFrame = (props) => {
     return (
         <iframe 
             src={props.src} 
@@ -18,4 +19,10 @@ const IFrame = (props) => {
     )
 }
 
-export default IFrame;
+iFrame.propTypes = {
+    src: PropTypes.string.isRequired,
+    style: PropTypes.object,
+    title: PropTypes.string.isRequired
+}
+
+export default iFrame;

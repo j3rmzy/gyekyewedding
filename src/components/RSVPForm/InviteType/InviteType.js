@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const inviteType = (props) => {
     let inviteTypeText = 'All day invitation';
@@ -12,6 +13,10 @@ const inviteType = (props) => {
             {inviteTypeText}
         </div>
     )
+}
+
+inviteType.propTypes = {
+    inviteType: PropTypes.string.isRequired
 }
 
 export default inviteType;

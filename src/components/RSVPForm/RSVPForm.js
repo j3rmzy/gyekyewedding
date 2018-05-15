@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Names from './Title/Title';
 import InviteType from './InviteType/InviteType';
@@ -34,6 +35,13 @@ const rsvpForm = (props) => {
             </form>
         </div>
     )
+}
+
+rsvpForm.propTypes = {
+    users: PropTypes.object.isRequired,
+    updateFormInputs: PropTypes.func,
+    attendeeSelection: PropTypes.func,
+    disabled: PropTypes.bool.isRequired
 }
 
 export default rsvpForm;

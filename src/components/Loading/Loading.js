@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MJIcon from '../../assets/images/mj-icon-loading.svg';
+import MJIcon from '../../assets/images/mj-icon-loading.png';
 
 import './Loading.scss';
 

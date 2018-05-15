@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Aux from '../../../hoc/Aux';
 
@@ -48,6 +49,13 @@ class Checkboxes extends Component {
             </Aux>
         )
     }
+}
+
+Checkboxes.propTypes = {
+    id: PropTypes.string,
+    value: PropTypes.string,
+    checked: PropTypes.bool,
+    onChange: PropTypes.func
 }
 
 export default Checkboxes;

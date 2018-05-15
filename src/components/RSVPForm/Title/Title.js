@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Aux from '../../../hoc/Aux';
 
-const Title = (props) => {
+const title = (props) => {
     return (
         <Aux>
             <h2>
@@ -17,4 +18,8 @@ const Title = (props) => {
     )
 }
 
-export default Title;
+title.propTypes = {
+    names: PropTypes.array.isRequired
+}
+
+export default title;
