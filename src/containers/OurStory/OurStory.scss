@@ -3,7 +3,7 @@
 .our-story {
     background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
     background-blend-mode: multiply;
-    padding: 100px 0 165px;
+    padding: 40px 0 165px;
     color: $blue;
 
     @media screen and (min-width: $screen-sm) {
@@ -13,19 +13,53 @@
     .our-story-images {
         background-color: $grey;
         margin-bottom: 36px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        border: 1px solid #cccccc;
 
         @media screen and (min-width: $screen-sm) {
-            margin-bottom: 0;
+            margin: 0;
         }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+
+            &.img-small {
+                display: block;
+
+                @media screen and (min-width: $screen-sm) {
+                    display: none;
+                }
+            }
+
+            &.img-big {
+                display: none;
+
+                @media screen and (min-width: $screen-sm) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .our-story-header {
+        margin-bottom: 24px;
     }
 
     .our-story-grid-container {
         display: grid;
 
         @media screen and (min-width: $screen-sm) {
-            grid-template-columns: 49% 49%;
-            grid-row-gap: 0;
-            grid-column-gap: 2%;
+            grid-template-rows: auto 80%;
+        }
+
+        .our-story-main {
+            @media screen and (min-width: $screen-sm) {
+                display: grid;
+                grid-template-columns: 49% 49%;
+                grid-column-gap: 2%;
+            }
         }
 
         .our-story-image-grid {
@@ -46,7 +80,7 @@
     h2 {
         text-transform: none;
         font-size: 4em;
-        margin-bottom: 36px;
+        margin-bottom: 0;
     }
 
     .wedding-party {
@@ -90,21 +124,6 @@
 
         .wedding-party-witness {
             margin-top: 24px;
-        }
-    }
-
-    .our-story-images {
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-        border: 1px solid #cccccc;
-
-        @media screen and (min-width: $screen-sm) {
-            margin-top: 25px;
-        }
-
-        img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
         }
     }
 }

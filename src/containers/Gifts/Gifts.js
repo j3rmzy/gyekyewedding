@@ -4,7 +4,7 @@ import Wrapper from '../../hoc/Wrapper/Wrapper';
 
 import './Gifts.scss';
 
-import KuoniLogo from '../../assets/images/kuoni_logo.svg';
+import KuoniLogo from '../../assets/images/kuoni_logo.png';
 
 const gifts = () => {
     return (

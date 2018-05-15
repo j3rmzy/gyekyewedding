@@ -137,7 +137,7 @@ class DetailsPage extends Component {
 
     render() {
         return (
-            <Aux>
+            <Aux>               
                 {!this.state.submitted ? 
                     this.state.users.personOne ?
                         <RSVPForm 

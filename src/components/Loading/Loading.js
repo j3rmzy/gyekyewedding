@@ -1,8 +1,15 @@
 import React from 'react';
 
+import MJIcon from '../../assets/images/mj-icon-loading.svg';
+
+import './Loading.scss';
+
 const loading = () => {
     return (
-        <p>Loading</p>
+        <div className="loading">
+            <p>Loading</p>
+            <img src={MJIcon} alt="M &amp; J Icon" />
+        </div>
     )
 }
 
