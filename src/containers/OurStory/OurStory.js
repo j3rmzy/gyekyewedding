@@ -1,5 +1,4 @@
 import React from 'react';
-import SimpleSlider from '../../components/SlideShow/SlideShow';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
 
@@ -15,8 +14,7 @@ const ourStory = () => {
                     </div>
                     <div className="our-story-main">
                         <div className="our-story-image-grid">
-                            <div className="our-story-images" style={{width: 400}}>
-                                <SimpleSlider />
+                            <div className="our-story-images">
                                 <p>1</p>
                             </div>
                         </div>

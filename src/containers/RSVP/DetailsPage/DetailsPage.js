@@ -14,7 +14,7 @@ class DetailsPage extends Component {
         users: {
             personOne: '',
             personTwo: '',
-            type: '',
+            inviteType: '',
             attendees: '',
             dietary: '',
             rsvp: false,
@@ -41,7 +41,7 @@ class DetailsPage extends Component {
                             personTwo,
                             attendees,
                             rsvp,
-                            type,
+                            inviteType,
                             selectedAttendees,
                             dietary
                         } = res.data;
@@ -52,7 +52,7 @@ class DetailsPage extends Component {
                                 personTwo: personTwo,
                                 attendees: attendees,
                                 rsvp: rsvp,
-                                type: type,
+                                type: inviteType,
                                 selectedAttendees: selectedAttendees,
                                 dietary: dietary
                             }

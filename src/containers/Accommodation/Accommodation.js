@@ -30,7 +30,7 @@ class Accommodation extends Component {
                         <div className="details-grid">
                             <p>The Express by Holiday Inn<br/>
                             Quedgeley, Gloucester, GL52 2AB<br/>
-                            [Phone Number]</p>
+                            01452 726 400</p>
                             <p><a rel="noopener noreferrer" href="https://www.bit.ly/1iZGKM5" target="_blank">https://www.bit.ly/1iZGKM5</a></p>
                             <p>A block of rooms has been reserved for our guests at a reduced rate for the night before and night of our wedding.</p>
                             <p>Please call the hotel direct and quote the code ‘MC1’ when making a reservation</p>
