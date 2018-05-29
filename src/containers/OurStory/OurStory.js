@@ -1,4 +1,5 @@
 import React from 'react';
+import SimpleSlider from '../../components/SlideShow/SlideShow';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
 
@@ -14,9 +15,9 @@ const ourStory = () => {
                     </div>
                     <div className="our-story-main">
                         <div className="our-story-image-grid">
-                            <div className="our-story-images">
-                                <img alt="Story" src="http://via.placeholder.com/750x350?text=1" className="img-responsive img-small" />
-                                <img alt="Story" src="http://via.placeholder.com/750x1000?text=1" className="img-responsive img-big" />
+                            <div className="our-story-images" style={{width: 400}}>
+                                <SimpleSlider />
+                                <p>1</p>
                             </div>
                         </div>
                         <div className="our-story-grid">
@@ -68,7 +69,6 @@ const ourStory = () => {
                 </div>
             </Wrapper>
         </div>
-
     )
 }
 

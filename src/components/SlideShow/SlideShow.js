@@ -3,37 +3,31 @@ import Slider from 'react-slick';
 
 import './SlideShow.scss';
 
+import IMG1 from '../../assets/images/abstract03.jpg';
+import IMG2 from '../../assets/images/abstract04.jpg';
+import IMG3 from '../../assets/images/image_3.jpg';
+import IMG4 from '../../assets/images/image_4.jpg';
+
 class SimpleSlider extends Component {
     render() {
         var settings = {
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: true,
-            adaptiveWidth: true,
-            fade: true,
+            // infinite: true,
+            // speed: 500,
+            // slidesToShow: 1,
+            // slidesToScroll: 1,
+            // fade: true,
             dots: false,
             arrows: false,
-            autoplay: true
+            // autoplay: true
         };
 
         return (
             <Slider {...settings}>
                 <div>
-                    <img alt="1" src="http://via.placeholder.com/2500x450?text=1" />
+                    <h3>1</h3>
                 </div>
                 <div>
-                    <img alt="2" src="http://via.placeholder.com/2500x450?text=2" />
-                </div>
-                <div>
-                    <img alt="3" src="http://via.placeholder.com/2500x450?text=3" />
-                </div>
-                <div>
-                    <img alt="4" src="http://via.placeholder.com/2500x450?text=4" />
-                </div>
-                <div>
-                    <img alt="5" src="http://via.placeholder.com/2500x450?text=5" />
+                    <h3>2</h3>
                 </div>
             </Slider>
         )

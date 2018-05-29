@@ -52,7 +52,7 @@ class DetailsPage extends Component {
                                 personTwo: personTwo,
                                 attendees: attendees,
                                 rsvp: rsvp,
-                                inviteType: inviteType,
+                                type: inviteType,
                                 selectedAttendees: selectedAttendees,
                                 dietary: dietary
                             }
@@ -114,6 +114,8 @@ class DetailsPage extends Component {
                 } else {
                     users['selectedAttendees'] = [...this.selectedCheckboxes];
                 }
+
+                users['timestamp'] = new Date();
 
                 this.setState({
                     sending: true
