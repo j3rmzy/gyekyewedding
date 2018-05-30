@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
+import Carousel from '../../components/Carousel/Carousel';
 
 import './OurStory.scss';
 
@@ -15,7 +16,7 @@ const ourStory = () => {
                     <div className="our-story-main">
                         <div className="our-story-image-grid">
                             <div className="our-story-images">
-                                <p>1</p>
+                                <Carousel />
                             </div>
                         </div>
                         <div className="our-story-grid">
