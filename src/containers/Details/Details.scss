@@ -1,10 +1,8 @@
 @import '../../assets/sass/variables.scss';
 
 .details {
-    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
-    background-blend-mode: multiply;
+    background: transparent url('../../assets/images/paper_blue_bg.png') repeat top left;
     padding: 0;
-    background-color: $blue;
     color: #ffffff;
     text-align: center;
 
@@ -35,6 +33,7 @@
     display: grid;
 
     @media screen and (min-width: $screen-sm) {
+        -ms-grid-row: 47% 47%;
         grid-template-columns: 47% 47%;
         grid-row-gap: 0;
         grid-column-gap: 6%;
