@@ -27,7 +27,7 @@ const formInputs = (props) => {
                     checked={props.rsvp === 'no'} />
                     <label htmlFor="RSVPNo">Will be there in spirit</label>
             </div>
-            {props.attendees >= 2
+            {props.attendees === 2
                 ? <div className="form-row radio">
                     <input type="radio" 
                         name="rsvp" 
