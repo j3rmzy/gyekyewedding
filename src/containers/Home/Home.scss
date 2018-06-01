@@ -63,7 +63,6 @@
         grid-row-gap: 36px;
 
         @media screen and (min-width: $screen-sm) {
-            -ms-grid-columns: 50% 50%;
             grid-template-columns: 50% 50%;
             grid-row-gap: 0;
         }
