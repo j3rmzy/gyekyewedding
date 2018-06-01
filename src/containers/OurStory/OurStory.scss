@@ -1,5 +1,37 @@
 @import '../../assets/sass/variables.scss';
 
+.cssgridlegacy.no-cssgrid {
+    .our-story {
+        @media screen and (min-width: $screen-sm) {
+            overflow: hidden;
+        }
+
+        .our-story-grid-container {
+            display: block;
+            width: 100%;
+
+            .our-story-main {
+                display: block;
+
+                .our-story-image-grid {
+                    @media screen and (min-width: $screen-sm) {
+                        width: 50%;
+                        float: right;
+                    }
+                }
+
+                .our-story-grid {
+                    @media screen and (min-width: $screen-sm) {
+                        width: 48%;
+                        margin-right: 2%;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .our-story {
     background: #f2f2f2;
     padding: 40px 0 165px;

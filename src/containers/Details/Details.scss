@@ -1,5 +1,15 @@
 @import '../../assets/sass/variables.scss';
 
+.cssgridlegacy.no-cssgrid {
+    .details-grid-container  {
+        .details-grid {
+            @media screen and (min-width: $screen-sm) {
+                margin-right: 6%;
+            }
+        }
+    }
+}
+
 .details {
     background: transparent url('../../assets/images/paper_blue_bg.png') repeat top left;
     padding: 0;
