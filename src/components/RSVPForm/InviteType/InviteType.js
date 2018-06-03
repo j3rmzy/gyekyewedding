@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const inviteType = (props) => {
     let inviteTypeText = 'All day invitation';
 
-    if (props.inviteType === 'evening') {
+    if (props.type === 'evening') {
         inviteTypeText = 'Evening invitation';
     }
 
@@ -16,7 +16,7 @@ const inviteType = (props) => {
 }
 
 inviteType.propTypes = {
-    inviteType: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired
 }
 
 export default inviteType;

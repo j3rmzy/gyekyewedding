@@ -75,6 +75,7 @@ class LoginPage extends Component {
                         ? <Redirect to={`${authUser.uid}`} />
                         : null }
                 </AuthUserContext.Consumer>
+                Please respond by 31st July
 
                 <LoginForm 
                     submitLogin={this.onSubmitHandler}

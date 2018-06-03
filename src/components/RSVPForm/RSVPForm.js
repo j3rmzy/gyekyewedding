@@ -21,8 +21,10 @@ const rsvpForm = (props) => {
         <div id="rsvp-form">
             <form onSubmit={props.submitForm}>
                 <Names names={names} />
-                <InviteType inviteType={props.users.inviteType} />
+                <InviteType type={props.users.type} />
+                {props.users.type === 'allday' ? 
                 <ReservedSeats reservedSeats={props.users.attendees}/>
+                : null}
                 <FormInputs 
                     names={names} 
                     changed={props.updateFormInputs}

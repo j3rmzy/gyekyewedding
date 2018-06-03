@@ -7,7 +7,7 @@ const formInputs = (props) => {
     return (
         <div className="form-inputs">
             <div className="form-row">
-                <span>We hope you can join us?</span>
+                <span>We hope you can join us.</span>
             </div>
             <div className="form-row radio">
                 <input type="radio" 
@@ -67,9 +67,9 @@ const formInputs = (props) => {
 
 formInputs.propTypes = {
     onChange: PropTypes.func,
-    rsvp: PropTypes.string,
+    rsvp: PropTypes.bool.isRequired,
     label: PropTypes.string,
-    selectedAttendees: PropTypes.array.isRequired,
+    selectedAttendees: PropTypes.array,
     handleCheckboxChange: PropTypes.func,
     value: PropTypes.string
 }
