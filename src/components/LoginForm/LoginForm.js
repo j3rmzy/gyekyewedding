@@ -10,7 +10,8 @@ import './LoginForm.scss';
 const loginForm = (props) => {
     return (
         <Aux>
-            <p>Please enter the unique code from your invitation</p>
+            <p>Please respond by <strong>31st July</strong>.</p>
+            <p>Enter the unique code from your invitation.</p>
             <form className="login-form" onSubmit={props.submitLogin}>
                 <input onChange={props.changed} className={props.error ? "error" : null} />
 

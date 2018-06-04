@@ -14,6 +14,8 @@ class DetailsPage extends Component {
         users: {
             personOne: '',
             personTwo: '',
+            personThree: '',
+            personFour: '',
             type: '',
             attendees: '',
             dietary: '',
@@ -39,6 +41,8 @@ class DetailsPage extends Component {
                         const {
                             personOne,
                             personTwo,
+                            personThree,
+                            personFour,
                             attendees,
                             rsvp,
                             type,
@@ -50,6 +54,8 @@ class DetailsPage extends Component {
                             users: {
                                 personOne: personOne,
                                 personTwo: personTwo,
+                                personThree: personThree,
+                                personFour: personFour,
                                 attendees: attendees,
                                 rsvp: rsvp,
                                 type: type,

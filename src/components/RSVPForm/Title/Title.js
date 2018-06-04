@@ -9,7 +9,7 @@ const title = (props) => {
             <h2>
                 {props.names.map((name) => {
                     return (
-                        <span key={name}>{name}</span>
+                        <span key={name} className={props.names.length >= 3 ? 'inline' : null}>{name}</span>
                     )
                 })}  
             </h2>
