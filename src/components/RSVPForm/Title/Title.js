@@ -6,7 +6,7 @@ import Aux from '../../../hoc/Aux';
 const title = (props) => {
     return (
         <Aux>
-            <h2>
+            <h2 className={props.names.length >= 3 ? 'many' : null}>
                 {props.names.map((name) => {
                     return (
                         <span key={name} className={props.names.length >= 3 ? 'inline' : null}>{name}</span>

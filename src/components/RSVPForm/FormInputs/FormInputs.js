@@ -16,7 +16,7 @@ const formInputs = (props) => {
                     id="RSVPYes"
                     onChange={props.changed}
                     checked={props.rsvp === 'yes'} />
-                    <label htmlFor="RSVPYes">Wouldn&apos;t miss it for the world.</label>
+                    <label htmlFor="RSVPYes">Wouldn&apos;t miss it for the world</label>
             </div>
             <div className="form-row radio">
                 <input type="radio" 

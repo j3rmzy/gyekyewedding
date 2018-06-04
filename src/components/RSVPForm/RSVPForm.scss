@@ -48,35 +48,38 @@
             display: block;
 
             &:nth-child(2n+2):before {
-                content: "&";
+                content: '&';
                 display: block;
             }
         }
 
-        span.inline {
-            display: inline-block;
-
-
-            &:after {
-                content: ",";
+        &.many {
+            span {
                 display: inline-block;
-                margin-right: 5px;
 
-            }
-
-            &:last-child {
                 &:after {
-                    content: "";
-                    margin-right: 0;
+                    content: ',';
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+    
+                &:last-child:after {
+                    display: none;
+                }
+    
+                &:nth-last-child(2):after {
+                    content: '&';
+                    display: inline-block;
+                    margin: 0 8px;
                 }
 
-                &:before {
-                    content: "&";
-                    display: inline-block;
-                    margin-right: 5px;
+                &:nth-child(2n+2):before {
+                    display: none;
                 }
             }
         }
+
+        
     }
 
     .radio,
