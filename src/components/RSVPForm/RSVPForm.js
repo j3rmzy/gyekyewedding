@@ -25,7 +25,8 @@ const rsvpForm = (props) => {
                 {props.users.type === 'allday' ? 
                 <ReservedSeats reservedSeats={props.users.attendees}/>
                 : null}
-                <FormInputs 
+                <FormInputs
+                    type={props.users.type} 
                     names={names} 
                     changed={props.updateFormInputs}
                     rsvp={props.users.rsvp}

@@ -7,7 +7,7 @@ const formInputs = (props) => {
     return (
         <div className="form-inputs">
             <div className="form-row">
-                <span>We hope you can join us.</span>
+                <span>We hope you can join us!</span>
             </div>
             <div className="form-row radio">
                 <input type="radio" 
@@ -55,12 +55,14 @@ const formInputs = (props) => {
                 })}
             </div>
             : null}
-            <div className="form-row dietary-req">
+            {props.type === 'allday'
+            ? <div className="form-row dietary-req">
                 <label htmlFor="dietary">Any dietary requirements?</label>
                 <textarea id="dietary" name="dietary" 
                     onChange={props.changed}
                     value={props.dietary} />
             </div>
+            : null }
         </div>
     )
 }
