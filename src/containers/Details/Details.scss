@@ -114,6 +114,16 @@ button.white-link {
     padding: 0;
 }
 
-#taxis {
+#taxis,
+#church {
     padding-bottom: 90px;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        font-weight: 500;
+        text-decoration: underline;
+        color: #ffffff;
+    }
 }

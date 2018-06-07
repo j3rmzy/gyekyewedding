@@ -12,8 +12,8 @@ const gifts = () => {
             <h3>Gifts</h3>
             <Wrapper>
                 <div className="narrow-copy">
-                    <p>Your presence at our wedding is gift  enough, but if you do wish to buy us  something, a contribution towards our  dream honeymoon would be appreciated.</p>
-                    <p>Click the logo below to be taken to the Kuoni gift list.</p>
+                    <p>We&apos;ve been asked what we&apos;d like for a gift and the answer is simple: you at our wedding, celebrating and dancing the night away with us!</p>
+                    <p>If you insist on a gift, we would be grateful of a contribution towards our honeymoon to Cuba. We appreciate all your contributions, no matter what size: to help make our honeymoon a trip to remember!</p>
                     <p>Kuoni Gift List number: <strong>35190</strong></p>
                     <a rel="noopener noreferrer" href="https://www.kuoni.co.uk/giftlist" target="_blank">
                         <img alt="Kuoni Logo" className="kuoni-logo" src={KuoniLogo} />
