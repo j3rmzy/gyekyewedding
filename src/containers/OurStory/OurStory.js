@@ -10,6 +10,9 @@ const ourStory = () => {
         <div className="wedding-party" id="wedding-party">
             <Wrapper>
                 <div className="our-story-grid-container">
+                    <div className="our-story-header">
+                        <h2>Wedding Party</h2> 
+                    </div>
                     <div className="our-story-main">
                         <div className="our-story-image-grid">
                             <div className="our-story-images">
@@ -18,7 +21,6 @@ const ourStory = () => {
                         </div>
                         <div className="our-story-grid">
                             <div className="wedding-party">
-                            <h2>Wedding Party</h2>
                                 <div className="wedding-party-parents">
                                     <h3>Parents</h3>
                                     <div className="wedding-party-list">

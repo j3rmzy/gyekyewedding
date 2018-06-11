@@ -25,7 +25,7 @@ const navigationItems = (props) => {
 
                     return (
                         <li key={item} onClick={props.clicked}>
-                            <NavLink smooth to={hash}>{item}</NavLink>
+                            <NavLink to={hash}>{item}</NavLink>
                         </li>
                     )
                 }

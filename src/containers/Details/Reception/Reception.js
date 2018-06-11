@@ -28,11 +28,11 @@ class Reception extends Component {
                     <div className="details-grid-container">
                         <div className="details-grid">
                             <p><strong>Elmore Court<br/> Gloucester<br/> GL2 3NT</strong></p>
-                            <p>It&apos;s official. We&apos;re married! Now time to get the party started&hellip;</p>
+                            <p>It&apos;s official. We&apos;re married! Now time to get the party started…</p>
                             <p>Straight after the ceremony it&apos;s over to Elmore Court for beers and bubbles, before sitting down for the wedding breakfast at around 4.45pm.</p>
                             <p>Evening guests will arrive at 7.30pm just in time for the first dance. Don&apos;t worry we won&apos;t steal the dancefloor for too long, we want to see your best moves! Dance offs, choreographed routines and the moonwalk are encouraged.</p>
-                            <p>Don&apos;t worry about losing steam &ndash; we&apos;ll keep you going with bacon and sausage baps into the night.</p>
-                            <p>Elmore Court was the first wedding venue we viewed and it blew us away. As you know, we love to party and we think that Elmore Court is the perfect place to host the biggest party of our lives. We want you to have fun at our wedding, so please don&apos;t hold back. And take lots of pictures to help us remember all the fun that was had!</p>
+                            <p>Don&apos;t worry about losing steam &ndash; we&apos;ll keep you going with bacon and sausage baps into the night. </p>
+                            <p>Elmore Court was the first wedding venue we viewed and it blew us away. As you know, we love to party and we think that Elmore Court is the perfect place to host the biggest party of our lives. We want you to have fun at our wedding, so please don’t hold back. And take lots of pictures to help us remember all the fun that was had!</p>
                             <button className="white-link" href="#" onClick={this.toggleModalHandler} >Directions</button>
                         </div>
                         <div className="map-grid">
