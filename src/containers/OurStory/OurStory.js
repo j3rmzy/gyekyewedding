@@ -7,12 +7,9 @@ import './OurStory.scss';
 
 const ourStory = () => {
     return (
-        <div className="our-story" id="our-story">
+        <div className="wedding-party" id="wedding-party">
             <Wrapper>
                 <div className="our-story-grid-container">
-                    <div className="our-story-header">
-                        <h2>Our Story</h2> 
-                    </div>
                     <div className="our-story-main">
                         <div className="our-story-image-grid">
                             <div className="our-story-images">
@@ -20,9 +17,8 @@ const ourStory = () => {
                             </div>
                         </div>
                         <div className="our-story-grid">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                             <div className="wedding-party">
-                                <h3>Wedding Party</h3>
+                            <h2>Wedding Party</h2>
                                 <div className="wedding-party-parents">
                                     <h3>Parents</h3>
                                     <div className="wedding-party-list">

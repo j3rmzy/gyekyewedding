@@ -1,7 +1,7 @@
 @import '../../assets/sass/variables.scss';
 
 .cssgridlegacy.no-cssgrid {
-    .our-story {
+    .wedding-party {
         @media screen and (min-width: $screen-sm) {
             overflow: hidden;
         }
@@ -32,13 +32,13 @@
     }
 }
 
-.our-story {
+.wedding-party {
     background: #f2f2f2;
-    padding: 40px 0 165px;
+    padding: 40px 0 100px;
     color: $blue;
 
     @media screen and (min-width: $screen-sm) {
-        padding: 48px 0 90px;
+        padding: 0 0 90px;
     }
 
     .our-story-images {
@@ -112,10 +112,7 @@
     }
 
     .wedding-party {
-        margin-top: 50px;
-        border-top: 1px solid $grey;
-        padding-top: 50px;
-
+        padding: 0;
 
         h3 {
             font-size: 3.5em;

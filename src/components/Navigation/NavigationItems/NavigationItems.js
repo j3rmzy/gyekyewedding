@@ -9,7 +9,7 @@ import Aux from '../../../hoc/Aux';
 
 import AuthUserContext from '../../AuthUserContext/AuthUserContext';
 
-const menuItems = ['Home', 'Our Story', 'Church', 'Reception', 'Taxis', 'Accommodation', 'Gifts', 'RSVP']
+const menuItems = ['Home', 'Wedding Party', 'Church', 'Reception', 'Taxis', 'Accommodation', 'Gifts', 'RSVP']
 
 const navigationItems = (props) => {
     return (

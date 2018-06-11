@@ -56,6 +56,10 @@
         @media screen and (min-width: $screen-md) {
             font-size: 1.25em;
         }
+
+        sup {
+            font-size: 58%;
+        }
     }
 
     .home-grid-container {
