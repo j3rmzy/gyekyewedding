@@ -1,0 +1,152 @@
+@import '../../assets/sass/variables.scss';
+
+.rsvp-inner {
+    @media screen and (min-width: $screen-sm) {
+        padding-bottom: 50px;
+        margin-top: 36px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        margin-top: 25px !important;
+    }
+}
+
+#rsvp-form {
+    background-color: #ffffff;
+    padding: 30px 15px;
+    border: 1px solid #cccccc;
+
+    box-shadow:
+    0 1px 1px rgba(0,0,0,0.15), /* The top layer shadow */
+    0 10px 0 -5px $blue, /* The second layer */
+    0 10px 1px -4px rgba(0,0,0,0.15), /* The second layer shadow */
+    0 20px 0 -10px $orange, /* The third layer */
+    0 20px 1px -9px rgba(0,0,0,0.3); /* The third layer shadow */
+
+    @media screen and (min-width: $screen-sm) {
+        margin: 0 70px;
+    }
+
+    .button {
+        @media screen and (min-width: $screen-sm) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    h2 {
+        font-size: 3.3em;
+        line-height: 0.8;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $screen-sm) {
+            font-size: 5em;
+            margin-bottom: 30px;
+        }
+
+        span {
+            display: block;
+
+            &:nth-child(2n+2):before {
+                content: '&';
+                display: block;
+            }
+        }
+
+        &.many {
+            span {
+                display: inline-block;
+
+                &:after {
+                    content: ',';
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+    
+                &:last-child:after {
+                    display: none;
+                }
+    
+                &:nth-last-child(2):after {
+                    content: '&';
+                    display: inline-block;
+                    margin: 0 8px;
+                }
+
+                &:nth-child(2n+2):before {
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+
+    .radio,
+    .checkbox {
+        display: flex; 
+        align-items: center;
+    }
+
+    .checkbox {
+        margin-bottom: 3px !important;
+    }
+
+    .invite-type {
+        text-transform: uppercase;
+        padding: 10px 0;
+        border-bottom: 1px solid #dedede;
+    }
+
+    .reserved-seats {
+        text-transform: uppercase;
+        padding: 15px 0;
+        border-bottom: 1px solid #dedede;
+        line-height: 1.3;
+        font-weight: 400;
+
+        @media screen and (min-width: $screen-sm) {
+            font-size: 1.3em;
+        }
+    }
+
+    .invite-type {
+        @media screen and (min-width: $screen-sm) {
+            font-size: 1.3em;
+        }
+    }
+
+    .form-inputs {
+        margin-top: 15px;
+        text-align: left;
+
+        .form-row {
+            margin-bottom: 10px;
+        }
+
+        input[type='radio'],
+        input[type='checkbox'] {
+            float: left;
+
+            & + label {
+                margin-left: 12px;
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid #cccccc;
+            height: 100px;
+            padding: 7px;
+            font-weight: 300;
+        }
+
+        .not-all {
+            padding: 10px;
+            background-color: #f6f6f6;
+            margin: 20px 0;
+        }
+    }
+}

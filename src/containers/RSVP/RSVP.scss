@@ -1,0 +1,35 @@
+@import '../../assets/sass/variables.scss';
+
+.rsvp {
+    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
+    padding: 60px 0 40px;
+    color: $blue;
+    min-height: 100vh;
+    text-align: center;
+
+    @media screen and (min-width: $screen-sm) {
+        padding-top: 100px;
+    }
+
+    h1 {
+        letter-spacing: 10px;
+    }
+
+    .rsvp-inner {
+        @media screen and (min-width: $screen-md) {
+            margin: 0 auto;
+            width: 700px;
+        }
+    }
+
+    .dietary-req {
+        margin-top: 24px;
+    }
+
+    button {
+        &.thank-you {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

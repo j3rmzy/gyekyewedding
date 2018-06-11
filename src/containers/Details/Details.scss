@@ -1,18 +1,129 @@
+@import '../../assets/sass/variables.scss';
+
+.cssgridlegacy.no-cssgrid {
+    .details-grid-container  {
+        .details-grid {
+            @media screen and (min-width: $screen-sm) {
+                margin-right: 6%;
+            }
+        }
+    }
+}
+
 .details {
-    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
-    background-blend-mode: multiply;
-    padding: 50px 0 165px;
-    background-color: #063f70;
+    background: transparent url('../../assets/images/paper_blue_bg.png') repeat top left;
+    padding: 0;
     color: #ffffff;
     text-align: center;
 
     h3, h4 {
+        color: $gold;
+    }
+
+    h3 {
         font-size: 5em;
-        color: #d4bfa9;
+        padding-top: 50px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 7em;
+        }
     }
 
     h4 {
         font-size: 3em;
         margin-bottom: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
+    }
+}
+
+.details-grid-container {
+    display: grid;
+
+    @media screen and (min-width: $screen-sm) {
+        -ms-grid-row: 47% 47%;
+        grid-template-columns: 47% 47%;
+        grid-row-gap: 0;
+        grid-column-gap: 6%;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        margin-bottom: 60px;
+    }
+
+    .details-grid {
+        @media screen and (min-width: $screen-sm) {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            text-align: left;
+        }
+    }
+
+    .map-grid {
+        @media screen and (min-width: $screen-sm) {
+            grid-column-start: 2;
+            grid-row-start: 1;
+        }
+    }
+}
+
+.map {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 24px 0 0;
+    height: 250px;
+
+    @media screen and (min-width: $screen-sm) {
+        margin: 0;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        height: 350px;
+    }
+}
+
+.narrow-copy {
+    @media screen and (min-width: $screen-sm) {
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: $screen-md) {
+        width: 700px;
+    }
+}
+
+.details-inner {
+    padding-top: 50px;
+}
+
+.church-inner {
+    padding-top: 0;
+}
+
+button.white-link {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+#taxis,
+#church {
+    padding-bottom: 90px;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        font-weight: 500;
+        text-decoration: underline;
+        color: #ffffff;
     }
 }

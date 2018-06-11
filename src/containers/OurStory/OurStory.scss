@@ -1,23 +1,129 @@
-.our-story {
-    background: transparent url('../../assets/images/paper_@2X.png') repeat top left;
-    background-blend-mode: multiply;
-    padding: 100px 0 165px;
-    color: #104f83;
+@import '../../assets/sass/variables.scss';
+
+.cssgridlegacy.no-cssgrid {
+    .wedding-party {
+        @media screen and (min-width: $screen-sm) {
+            overflow: hidden;
+        }
+
+        .our-story-grid-container {
+            display: block;
+            width: 100%;
+
+            .our-story-main {
+                display: block;
+
+                .our-story-image-grid {
+                    @media screen and (min-width: $screen-sm) {
+                        width: 50%;
+                        float: right;
+                    }
+                }
+
+                .our-story-grid {
+                    @media screen and (min-width: $screen-sm) {
+                        width: 48%;
+                        margin-right: 2%;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wedding-party {
+    background: #f2f2f2;
+    padding: 40px 0 90px;
+    color: $blue;
+
+    @media screen and (min-width: $screen-sm) {
+        padding: 48px 0 90px;
+    }
+
+    .our-story-images {
+        margin-bottom: 36px;
+
+        @media screen and (min-width: $screen-sm) {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+
+            &.img-small {
+                display: block;
+
+                @media screen and (min-width: $screen-sm) {
+                    display: none;
+                }
+            }
+
+            &.img-big {
+                display: none;
+
+                @media screen and (min-width: $screen-sm) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .our-story-header {
+        margin-bottom: 24px;
+    }
+
+    .our-story-grid-container {
+        display: grid;
+
+        @media screen and (min-width: $screen-sm) {
+            grid-template-rows: auto 80%;
+        }
+
+        .our-story-main {
+            @media screen and (min-width: $screen-sm) {
+                display: grid;
+                grid-template-columns: 49% 49%;
+                grid-column-gap: 2%;
+            }
+        }
+
+        .our-story-image-grid {
+            @media screen and (min-width: $screen-sm) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+            }
+        }
+
+        .our-story-grid {
+            @media screen and (min-width: $screen-sm) {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+        }
+    }
 
     h2 {
         text-transform: none;
         font-size: 4em;
-        margin-bottom: 36px;
+        margin-bottom: 0;
     }
 
     .wedding-party {
-        margin-top: 50px;
-        border-top: 1px solid #dedede;
-        padding-top: 50px;
-
+        padding: 0;
 
         h3 {
             font-size: 3.5em;
+        }
+
+        .wedding-party-parents {
+            margin-bottom: 15px;
+
+            @media screen and (min-width: $screen-md) {
+                margin-bottom: 30px;
+            }
         }
 
         .wedding-party-list {
@@ -54,3 +160,4 @@
         }
     }
 }
+

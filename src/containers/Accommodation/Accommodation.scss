@@ -1,0 +1,88 @@
+@import '../../assets/sass/variables.scss';
+
+.accommodation {
+    background: #f2f2f2;
+    padding: 50px 0 0;
+    text-align: center;
+    color: $blue;
+
+
+    h3 {
+        font-size: 3em;
+        margin-bottom: 24px;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: 4em;
+        }
+    }
+
+    a {
+        font-weight: 400;
+        color: $blue;
+    }
+
+    .map {
+        margin: 24px 0 0;
+    }
+
+    .alternative-hotels {
+        margin-bottom: 0;
+        padding-top: 24px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $blue;
+        text-decoration: underline;
+        padding: 24px 0 0 0;
+
+        @media screen and (min-width: $screen-sm) {
+            padding-top: 0;
+        }
+
+        &.top {
+            display: none;
+
+            @media screen and (min-width: $screen-sm) {
+                display: inline-block;
+            }
+        }
+
+        &.bottom {
+            display: inline-block;
+
+            @media screen and (min-width: $screen-sm) {
+                display: none;
+            }
+        }
+    }
+
+    .details-grid-container {
+        @media screen and (min-width: $screen-sm) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.alt-hotels-wrapper {
+    @media screen and (min-width: $screen-sm) {
+        max-width: 600px;
+    }
+
+    .alt-hotels {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $screen-sm) {
+            float: left;
+            width: 46%;
+            margin: 0 2%;
+            height: 200px;
+            margin-bottom: 0;
+        }
+
+        p {
+            @media screen and (min-width: $screen-sm) {
+               margin-bottom: 6px;
+            }
+        }
+    }
+}

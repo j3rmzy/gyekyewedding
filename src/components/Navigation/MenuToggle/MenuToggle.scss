@@ -1,0 +1,19 @@
+@import '../../../assets/sass/variables.scss';
+
+.burger-menu {
+    border: none;
+    background: none;
+    padding: 8px 0;
+    cursor: pointer;
+
+    @media screen and (min-width: $screen-sm) {
+        display: none;
+    }
+
+    & > div {
+        width: 35px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 6px 0;
+    }
+}
