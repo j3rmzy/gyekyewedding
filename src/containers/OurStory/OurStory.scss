@@ -34,7 +34,7 @@
 
 .wedding-party {
     background: #f2f2f2;
-    padding: 40px 0 165px;
+    padding: 40px 0 90px;
     color: $blue;
 
     @media screen and (min-width: $screen-sm) {
@@ -112,7 +112,7 @@
     }
 
     .wedding-party {
-        padding-top: 0;
+        padding: 0;
 
         h3 {
             font-size: 3.5em;
