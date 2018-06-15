@@ -32,7 +32,7 @@ class Church extends Component {
                             <p>One of our favourite things about attending church is singing along to the hymns. We have picked three of our favourite hymns for our ceremony so please bring your singing voices &ndash; we want to hear you sing!</p>
                             <p>After the ceremony, we are hoping to capture some of those classic confetti shots. Confetti will be provided and can be thrown outside in the church yard. If you wish to bring your own confetti, please make sure it is biodegradable (not plastic or tinfoil which stays with the church for years afterwards!).</p>
                             <p>We have been coming to this church since February 2017 and really hope you will love it as much as we do!</p>
-                            <p><a className="white-link" href="#" onClick={this.toggleModalHandler} >Getting to The Church of St John The Baptist</a></p>
+                            <p><a className="white-link" onClick={this.toggleModalHandler} >Getting to The Church of St John The Baptist</a></p>
 
                         </div>
                         <div className="map-grid">

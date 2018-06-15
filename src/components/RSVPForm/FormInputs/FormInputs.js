@@ -69,7 +69,7 @@ const formInputs = (props) => {
 
 formInputs.propTypes = {
     onChange: PropTypes.func,
-    rsvp: PropTypes.bool.isRequired,
+    rsvp: PropTypes.string,
     label: PropTypes.string,
     selectedAttendees: PropTypes.array,
     handleCheckboxChange: PropTypes.func,
