@@ -10,8 +10,39 @@
 
 
 .ReactTable {
+    font-family: "Arial", sans-serif;
     font-size: 0.9em;
-    background-color: #ffffff;
-    width: 100%;
     color: #333333;
+    background-color: #ffffff;
+
+    .rt-resizable-header-content {
+        text-overflow: clip;
+        white-space: normal;
+    }
+
+    .rt-td {
+        border-right: 1px solid #eaeaea;
+    }
+
+    .rt-thead {
+        font-weight: 600;
+
+        &.-header {
+            box-shadow: none;
+            border-bottom: 1px solid rgba(0,0,0,0.5);
+        }
+    }
+
+    .rt-tbody {
+        .rt-tr-group {
+            .-odd {
+                background-color: #f4f4f4;
+            }
+
+            .rt-td {
+                text-overflow: clip;
+                white-space: normal;
+            }
+        }
+    }
 }

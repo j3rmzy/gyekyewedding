@@ -16,11 +16,18 @@ const columns = [
         Header: "Person Two",
         accessor: "personTwo"
     },{
+        Header: "Person Three",
+        accessor: "personThree"
+    },{
+        Header: "Person Four",
+        accessor: "personFour"
+    },{
         Header: "Type",
-        accessor: "inviteType"
+        accessor: "type"
     },{
         Header: "RSVP",
-        accessor: "rsvp"
+        accessor: "rsvp",
+        
     },{
         Header: "Selected Attendees",
         accessor: "selectedAttendees"
@@ -72,7 +79,8 @@ class ListPage extends Component {
         return (
             <ReactTable
                 data={this.state.users}
-                columns={columns} 
+                columns={columns}
+                defaultPageSize={50}
             />
         )
     }
