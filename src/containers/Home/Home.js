@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import Wrapper from '../../hoc/Wrapper/Wrapper';
 
@@ -24,7 +24,6 @@ class Home extends Component {
                                 <h1>Michelle Cook <span>&amp;</span> Jermaine Gyekye</h1>
                                 <p>Are getting married!</p>
                                 <p className="date">Saturday 22<sup>nd</sup> September 2018</p>
-                                <Link to="/rsvp/login" className="button">RSVP!</Link>
                             </div>
                         </div>
                     </div>
