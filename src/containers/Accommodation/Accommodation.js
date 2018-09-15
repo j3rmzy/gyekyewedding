@@ -29,7 +29,7 @@ class Accommodation extends Component {
                     <div className="details-grid-container">
                         <div className="details-grid">
                             <p>The Express by Holiday Inn<br/>
-                            Quedgeley, Gloucester, GL52 2AB<br/>
+                            Quedgeley, Gloucester, GL2 2AB<br/>
                             01452 726 400</p>
                             <p><a rel="noopener noreferrer" href="https://www.bit.ly/1iZGKM5" target="_blank">https://www.bit.ly/1iZGKM5</a></p>
                             <p>We have reserved a block of rooms for our guests the night before and night of our wedding.</p>
